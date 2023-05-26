@@ -14,7 +14,7 @@ function App() {
         <Route path='/'
         element={<Main className="main-container" />}/>
         <Route path='/add-new-recipe'
-        element={<NewRecipe/>}/>
+        element={<NewRecipe />}/>
 
 
       </Routes>

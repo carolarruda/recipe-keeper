@@ -4,13 +4,20 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: 0.7fr 3fr;
+  grid-template-columns: 200px 3fr;
 
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-
-.main-container {
-  background-color: #f5cac3;
+body {
   min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
 }

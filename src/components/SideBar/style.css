@@ -1,9 +1,9 @@
 
 .nav-container {
     padding-top: 40px;
-    background-color: #f4a5ae;
+    background-color: #c54f5b;
     min-height: 100vh;
-  
+
     display: grid;
     grid-template-rows: 50px 50px 50px 50px;
     row-gap: 10px;

@@ -1,0 +1,84 @@
+.form-container {
+    display: grid;
+    place-content: center;
+    background: url("../images/emy-XoByiBymX20-unsplash.jpg");
+    background-repeat: no-repeat;
+    /* background-size: 1600px; */
+    background-size:cover;
+    
+  }
+
+/* form itselff */
+.big-container {
+    
+    display: grid;
+    justify-content: center;
+  border: solid 1px transparent;
+  background-color: rgba(248, 211, 185, 0.7);
+  width: 600px;
+  height: 1000px;
+  border-radius: 20px;
+
+}
+
+/* form items */
+
+.view-section {
+    padding: 2rem 0;
+  }
+  
+  .form-stack > * + * {
+    margin-top: 0.5rem;
+  }
+  
+  .form-stack > label {
+    display: block;
+  }
+  
+  .form-stack > input {
+    width: 100%;
+  }
+  
+  .recipe-form {
+    max-width: 400px;
+  }
+  
+  .recipe-form h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-form label {
+    font-weight: bold;
+  }
+
+
+   /* .rating {
+       width: 208px;
+       height: 40px;
+       margin: 0 auto;
+       padding: 40px 50px;
+       border: 1px solid #ccc;
+       background: #f9f9f9;
+  } */
+   .rating label {
+       float: right;
+       position: relative;
+       width: 40px;
+       height: 40px;
+       cursor: pointer;
+  }
+   .rating label:not(:first-of-type) {
+       padding-right: 2px;
+  }
+   .rating label:before {
+       content: "\2605";
+       font-size: 25px;
+       color: #fcf6f6;
+       line-height: 1;
+  }
+   .rating input {
+       display: none;
+  }
+   .rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+       color: #e7ff0a;
+  }
