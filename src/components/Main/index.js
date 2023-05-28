@@ -1,3 +1,6 @@
+import Options from "../icons/options";
+
+
 const Main = ({ className }) => {
     return (
       <>

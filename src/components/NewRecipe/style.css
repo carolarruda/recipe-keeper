@@ -1,7 +1,7 @@
 .form-container {
     display: grid;
     place-content: center;
-    background: url("../images/emy-XoByiBymX20-unsplash.jpg");
+    background-color: rgb(251, 251, 251);
     background-repeat: no-repeat;
     /* background-size: 1600px; */
     background-size:cover;
