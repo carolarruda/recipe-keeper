@@ -10,27 +10,45 @@ import { Link } from "react-router-dom";
 const SideBar = ({ className }) => {
   return (
     <div className={className}>
+      <button className="options-icon remove">
       <Options />
+      </button>
+     
       <form className="center-it form-style">
         <label></label>
         <input type="text" placeholder="🔍 Search recipes" />
       </form>
       <div className="grid-menu">
-      <Plus />
-      <Link to={"add-new-recipe"}>
-        <a className="btn-add">Add new recipes</a>
-      </Link>
-      <HomeIcon />
-      <Link to={"/"}>
-        <a className="btn-add"> Home</a>
-      </Link>
-      <Like />
+        <Link to={"add-new-recipe"} style={{ textDecoration: "none" }}>
+          <div className="grid-menu-two btn-add">
+            <Plus />
+            <button className="remove">Add new recipes</button>
+          </div>
+        </Link>
 
-      <a className="btn-add">Favorites</a>
-      <Settings />
-      <a className="btn-add">Settings</a>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <div className="grid-menu-two btn-add">
+            <HomeIcon />
+            <button className="remove"> Home</button>
+          </div>
+        </Link>
+
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <div className="grid-menu-two btn-add">
+            <Like />
+            <button className="remove">Favorites</button>
+          </div>
+        </Link>
+        
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <div className="grid-menu-two btn-add">
+          <Settings />
+            <button className="remove">Settings</button>
+          </div>
+        </Link>
+
+
       </div>
-
     </div>
   );
 };
