@@ -1,5 +1,6 @@
 import "./style.css";
 import { useEffect, useState } from 'react'
+import { Link } from "react-router-dom";
 
 const Main = ({ className }) => {
 
@@ -19,11 +20,11 @@ const Main = ({ className }) => {
   return (
     <>
       <div className={className}>
-        <h1> My Recipes</h1>
+        <div></div>
         <section className="card-grid">
         {recipe.length > 0 && (recipe.map(item => {
           return (
-        <div style ={{ backgroundImage: `url(${item.photo})`}} >{item.title}</div>
+        <Link to={item.title.toLowerCase().replaceAll(' ', '')} style={{textDecoration: "none"}}><div style ={{ backgroundImage: `url(${item.photo})`}} >{item.title}</div></Link>
           )
         }))}
           

@@ -1,6 +1,6 @@
 .main-container {
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 20px 1fr;
     padding-left: 20px;
     background-color: rgb(251, 251, 251);
     background-image: url("");
@@ -9,16 +9,10 @@
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, min-content));
-    grid-gap: 20px;
+    grid-gap: 10px;
     align-content: start;
 }
 
-
-h1 {
-    padding-top: 10px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .card-grid div {
     min-width: 300px;
@@ -34,6 +28,7 @@ h1 {
     background-size: cover;
     padding-right: 10px;
     padding-bottom: 10px;
+ 
 
 
 }
