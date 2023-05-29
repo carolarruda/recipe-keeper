@@ -9,7 +9,7 @@ const Options = () => {
       viewBox="0 0 122.879 103.609"
       enableBackground="new 0 0 122.879 103.609"
       xmlSpace="preserve"
-	    fill="rgb(31,31,31)"
+      fill='#64648C'
     >
       <g>
         <path

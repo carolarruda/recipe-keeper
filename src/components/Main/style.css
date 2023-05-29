@@ -1,0 +1,52 @@
+.main-container {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    padding-left: 20px;
+    background-color: rgb(251, 251, 251);
+    background-image: url("");
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, min-content));
+    grid-gap: 20px;
+    align-content: start;
+}
+
+
+h1 {
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-grid div {
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    background-color: rgb(215, 206, 222);
+    color: rgb(231,231,231);
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 20px;
+    display: grid;
+    align-content: end;
+    justify-content: right;
+    background-size: cover;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

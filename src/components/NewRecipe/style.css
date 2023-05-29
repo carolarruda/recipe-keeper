@@ -13,7 +13,6 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-
   padding: 20px;
 }
 
@@ -41,18 +40,21 @@
   position: relative;
   height: 40px;
   cursor: pointer;
-  justify-content: left;
-  
+  justify-content: center; 
+  align-items: center; 
+  padding-top: 8px;
 }
+
 .rating label:not(:first-of-type) {
   padding-right: 2px;
+
 }
 .rating label:before {
   content: "\2605";
   font-size: 20px;
   color: #c1c1c1;
   line-height: 1;
-  border: #b52f2f;
+  align-items: center;
 
 }
 .rating input {
@@ -67,6 +69,7 @@
 .inline {
 display: grid;
 grid-template-columns: 0.5fr 1fr;
+align-items: center;
 }
 
 .segment, .inline {
@@ -81,3 +84,18 @@ padding-top: 12px;
 .courses {
   font-size: 10px;
 }
+
+.fifth-column input {
+  height: 25px;
+
+
+}
+.fifth-column {
+
+  padding-top: 35px;
+  display: grid;
+  grid-template-rows: 30px 30px;
+ }
+
+
+

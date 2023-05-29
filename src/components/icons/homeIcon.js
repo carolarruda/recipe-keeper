@@ -5,12 +5,12 @@ const HomeIcon = ({ colour = "#64648C" }) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0,0,256,256"
       width={"20px"}
-
+ 
       fillRule="nonzero"
     >
       <g
         fillOpacity="0.8"
-        fill="#1f1f1f"
+        fill='#64648C'
         fillRule="nonzero"
         stroke="none"
         strokeWidth="1"
@@ -22,7 +22,6 @@ const HomeIcon = ({ colour = "#64648C" }) => {
         fontFamily="none"
         fontWeight="none"
         fontSize="none"
-        textWAnchor="none"
         style={{ mixBlendMode: 'normal' }}
       >
         <g transform="scale(16,16)">
