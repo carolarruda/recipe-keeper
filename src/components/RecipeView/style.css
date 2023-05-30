@@ -1,0 +1,108 @@
+.grid-container {
+  display: grid;
+  grid-template:
+    "content content" 220px
+    "top top" 0.5fr
+    "left right" 2fr
+    "bottom bottom" 0.5fr/
+    1fr 2fr;
+}
+
+.content {
+  background-color: antiquewhite;
+  grid-area: content;
+  background-size: cover;
+  background-position: 0px;
+  filter: grayscale(20%);
+}
+
+.top {
+  background-color: beige;
+  grid-area: top;
+  display: grid;
+  grid-template:
+    "title right-side" 1fr
+    "subtitle right-side" 1fr/
+    2fr 1fr;
+}
+
+.left {
+  background-color: bisque;
+  grid-area: left;
+}
+
+.right {
+  background-color: rgb(240, 248, 255);
+  grid-area: right;
+}
+
+.bottom {
+  background-color: rgb(197, 221, 221);
+  grid-area: bottom;
+  background-size: cover;
+  background-position: 0px;
+  background-image: url("https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  filter: blur(0.8px);
+  filter: grayscale(30%);
+}
+
+.title {
+  display: grid;
+  grid-area: title;
+  background-color: rgb(240, 248, 255);
+  padding-left: 20px;
+  padding-top: 20px;
+  /* font-style: italic; */
+  font-weight: 600;
+  font-size: 2.3rem;
+  color: rgb(35, 31, 28);
+  align-content: center;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  background-color: rgb(240, 248, 255);
+}
+
+.right-side {
+  grid-area: right-side;
+  background-color: rgb(97, 184, 184);
+  display: grid;
+  grid-template:
+    "rating rating" 1fr
+    "servings time" 1fr/
+    1fr 1fr;
+}
+
+.rating {
+  grid-area: rating;
+  background-color: rgb(240, 248, 255);
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  align-content: center;
+  justify-content: right;
+  padding-right: 10px;
+}
+.servings {
+  grid-area: servings;
+}
+
+.time {
+  grid-area: time;
+}
+
+.servings, .time {
+    background-color:  rgb(240, 248, 255);
+    display: grid;
+    grid-template-columns: 50px 50px;
+    align-content: center;
+}
+
+.checked {
+  color: orange;
+}
+
+.number {
+    font-size: 22px;
+
+}

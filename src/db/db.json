@@ -2,11 +2,11 @@
   "recipes": [
     {
       "title": "Tomato Salad",
-      "photo": "https://www.recipetineats.com/wp-content/uploads/2020/03/Tomato-Basil-Salad_2.jpg",
-      "rating": "3",
+      "photo": "https://images.unsplash.com/photo-1623855244069-3594654e5e42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
+      "rating": "1",
       "course": "entree",
       "prep": "00:10",
-      "cook": "00:10",
+      "cook": "00:50",
       "servings": "4",
       "ingredients": "4 ripe tomatoes (180g/ 6oz each) (Note 1)\n1 1/2 tsp finely minced eschalots (US: shallots) (Note 2)\n1/2 tsp finely minced garlic (use a knife, not garlic press)\n1 tbsp white wine vinegar (Note 3)\n3 tbsp extra virgin olive oil\n3/4 tsp cooking / kosher salt\n2 pinches white pepper\n1 1/2 tbsp finely sliced basil leaves ,",
       "instructions": "    Cut the tomatoes into 8 or 10 wedges, cutting out the core. Place in a large bowl.\n    Sprinkle over eschallots, garlic, salt and pepper. Drizzle with olive oil and vinegar.\n    Gently toss to coat tomatoes. Add basil, toss again to disperse.\n    Pour into bowl and serve immediately! (Tip: Bread for mopping up the tomato juices is on point).",
@@ -16,11 +16,11 @@
     {
       "title": "Lasagna",
       "photo": "https://media.gettyimages.com/id/168247005/pt/foto/lasanha.jpg?s=612x612&w=0&k=20&c=HQDrIFbX7XpcQghxOW5qjNbIqq_AeMccq0tzg1QAVdo=",
-      "rating": "2",
+      "rating": "1",
       "course": "main",
       "prep": "",
       "cook": "",
-      "servings": "",
+      "servings": "8",
       "ingredients": "",
       "instructions": "",
       "notes": "",
