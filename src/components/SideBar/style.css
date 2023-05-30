@@ -1,7 +1,7 @@
 
 .nav-container {
     /* padding-top: 40px; */
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(197, 226, 231);
     min-height: 100vh;
     display: grid;
     grid-template-rows: 50px 50px 50px;
@@ -51,7 +51,7 @@
     cursor: pointer;
     font-size: 13px;
     color: rgb(33, 33, 33);
-    border-left: 3px solid transparent;
+    border-left: 4px solid transparent;
     height: 40px;
     padding-left: 10px;
  
@@ -59,14 +59,15 @@
     }
     
     .btn-add:hover {
-      border-left: 3px solid orangered;
-      background-color: rgb(218,218,218);
+      border-left: 4px solid #3e8092;
+      background-color: rgb(158, 205, 212);
       cursor: pointer;
+      color: white;
     }
 
     
     .btn-add:active {
-      box-shadow: inset 0px 3px 7px #d6d6e7;
+      box-shadow: inset 0px 3px 7px transparent;
       transform: translateY(2px);
     }
 

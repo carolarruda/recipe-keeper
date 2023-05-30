@@ -1,20 +1,20 @@
 import "./style.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const NewRecipe = () => {
+const NewRecipe = ({ recipes, setRecipes }) => {
   const [title, setTitle] = useState("");
   const [photo, setPhoto] = useState("");
   const [rating, setRating] = useState("");
-  const [course, setCourse] = useState("")
-  const [prep, setPrep] = useState("")
-  const [cook, setCook] = useState("")
-  const [servings, setServings] = useState("")
-  const [ingredients, setIngredients] = useState("")
-  const [instructions, setInstructions] = useState("")
-  const [notes, setNotes] = useState("")
+  const [course, setCourse] = useState("");
+  const [prep, setPrep] = useState("");
+  const [cook, setCook] = useState("");
+  const [servings, setServings] = useState("");
+  const [ingredients, setIngredients] = useState("");
+  const [instructions, setInstructions] = useState("");
+  const [notes, setNotes] = useState("");
 
-
-
+  const navigate = useNavigate()
 
   const handleTitle = (e) => {
     setTitle(e.target.value);
@@ -25,69 +25,93 @@ const NewRecipe = () => {
   };
 
   const handleRating = (e) => {
-   setRating(e.target.value)
-  }
+    setRating(e.target.value);
+  };
 
   const handleCourse = (e) => {
-    setCourse(e.target.value)
-  }
+    setCourse(e.target.value);
+  };
 
   const handlePrep = (e) => {
-    setPrep(e.target.value)
-  }
+    setPrep(e.target.value);
+  };
 
   const handleCook = (e) => {
-    setCook(e.target.value)
-  }
+    setCook(e.target.value);
+  };
 
   const handleServings = (e) => {
-    setServings(e.target.value)
-  }
+    setServings(e.target.value);
+  };
 
   const handleIngredients = (e) => {
-    setIngredients(e.target.value)
-  }
+    setIngredients(e.target.value);
+  };
 
   const handleInstructions = (e) => {
-    setInstructions(e.target.value)
-  }
+    setInstructions(e.target.value);
+  };
 
   const handleNotes = (e) => {
-    setNotes(e.target.value)
-  }
+    setNotes(e.target.value);
+  };
 
-  function handleSubmit (e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log({title, photo, rating, course, prep, cook, servings, ingredients, instructions, notes})
+    console.log({
+      title,
+      photo,
+      rating,
+      course,
+      prep,
+      cook,
+      servings,
+      ingredients,
+      instructions,
+      notes,
+    });
     const newRecipe = {
-      title, 
-      photo, 
-      rating, 
-      course, 
-      prep, 
-      cook, 
-      servings, 
-      ingredients, 
-      instructions, 
-      notes
-    }
-    console.log('new recipe', newRecipe)
+      title,
+      photo,
+      rating,
+      course,
+      prep,
+      cook,
+      servings,
+      ingredients,
+      instructions,
+      notes,
+    };
+    console.log("new recipe", newRecipe);
     const opts = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(newRecipe)
-    }
+      body: JSON.stringify(newRecipe),
+    };
 
-    fetch('http://localhost:4000/recipes', opts)
-    .then(response => response.json())
-    .then(() => {
-      fetch('http://localhost:4000/recipes')
-    })
-
-
-
+    fetch("http://localhost:4000/recipes", opts)
+      .then((response) => response.json())
+      .then(() => {
+        setRecipes(recipes);
+        navigate(`/`);
+        setTitle("");
+        setPhoto("");
+        setRating("");
+        setCourse("");
+        setPrep("");
+        setCook("");
+        setServings("");
+        setIngredients("");
+        setInstructions("");
+        setNotes("");
+        setRecipes(recipes)
+        fetch("http://localhost:4000/recipes")
+        .then((response) => response.json())
+        .then((data) => setRecipes(data));
+       
+      });
   }
 
   return (
@@ -116,16 +140,55 @@ const NewRecipe = () => {
             <div className="inline">
               <label htmlFor="rating">Star Rating</label>
               <div className="rating">
-                <input type="radio" id="star5" name="rating" value="5" onChange={handleRating} checked={rating === '5'}/>
+              <input
+                  type="radio"
+                  id="star5"
+                  name="rating"
+                  value="5"
+                  onChange={handleRating}
+                  checked={rating === "5"}
+                />
                 <label htmlFor="star5"></label>
-                <input type="radio" id="star4" name="rating" value="4" onChange={handleRating} checked={rating === '4'}/>
+                <input
+                  type="radio"
+                  id="star4"
+                  name="rating"
+                  value="4"
+                  onChange={handleRating}
+                  checked={rating === "4"}
+                />
                 <label htmlFor="star4"></label>
-                <input type="radio" id="star3" name="rating" value="3" onChange={handleRating} checked={rating === '3'}/>
+                <input
+                  type="radio"
+                  id="star3"
+                  name="rating"
+                  value="3"
+                  onChange={handleRating}
+                  checked={rating === "3"}
+                />
                 <label htmlFor="star3"></label>
-                <input type="radio" id="star2" name="rating" value="2" onChange={handleRating} checked={rating === '2'}/>
+                <input
+                  type="radio"
+                  id="star2"
+                  name="rating"
+                  value="2"
+                  onChange={handleRating}
+                  checked={rating === "2"}
+                />
                 <label htmlFor="star2"></label>
-                <input type="radio" id="star1" name="rating" value="1"  onChange={handleRating} checked={rating === '1'}/>
+                <input
+                  type="radio"
+                  id="star1"
+                  name="rating"
+                  value="1"
+                  onChange={handleRating}
+                  checked={rating === "1"}
+                />
                 <label htmlFor="star1"></label>
+
+  
+
+ 
               </div>
             </div>
             <div className="segment">
@@ -140,38 +203,74 @@ const NewRecipe = () => {
                 <option value="DEFAULT" disabled>
                   Choose course
                 </option>
-                <option value="entree"checked={course === 'entree'}>Entree</option>
-                <option value="main" checked={course === 'main'}>Main</option>
-                <option value="dessert" checked={course === 'dessert'}>Dessert</option>
+                <option value="entree" checked={course === "entree"}>
+                  Entree
+                </option>
+                <option value="main" checked={course === "main"}>
+                  Main
+                </option>
+                <option value="dessert" checked={course === "dessert"}>
+                  Dessert
+                </option>
               </select>
             </div>
             <div className="segment">
               <label htmlFor="prepTime">Prep Time</label>
-              <input type="time" style={{ width: "50px" }} onChange={handlePrep} value={prep}/>
+              <input
+                type="time"
+                style={{ width: "50px" }}
+                onChange={handlePrep}
+                value={prep}
+              />
             </div>
             <div className="segment">
               <label htmlFor="cookTime">Cook Time</label>
-              <input type="time" style={{ width: "50px" }} onChange={handleCook} value={cook}/>
+              <input
+                type="time"
+                style={{ width: "50px" }}
+                onChange={handleCook}
+                value={cook}
+              />
             </div>
             <div className="segment">
               <label htmlFor="numberServings">Servings</label>
-              <input type="number" style={{ width: "50px" }} onChange={handleServings} value={servings}/>
+              <input
+                type="number"
+                style={{ width: "50px" }}
+                onChange={handleServings}
+                value={servings}
+              />
             </div>
           </div>
 
           <div className="second-column segment">
             <label htmlFor="recipeIngredients">Ingredients</label>
-            <textarea type="text" rows="28" onChange={handleIngredients} value={ingredients}/>
+            <textarea
+              type="text"
+              rows="28"
+              onChange={handleIngredients}
+              value={ingredients}
+            />
           </div>
 
           <div className="third-column segment">
             <label htmlFor="recipeInstructions">Instructions</label>
-            <textarea type="text" rows="28"onChange={handleInstructions} value={instructions}/>
+            <textarea
+              type="text"
+              rows="28"
+              onChange={handleInstructions}
+              value={instructions}
+            />
           </div>
 
           <div className="fourth-column segment">
             <label htmlFor="notes">Notes</label>
-            <textarea type="text" rows="28" onChange={handleNotes} value={notes}/>
+            <textarea
+              type="text"
+              rows="28"
+              onChange={handleNotes}
+              value={notes}
+            />
           </div>
           <div className="fifth-column segment">
             <button type="submit">Save</button>

@@ -41,14 +41,12 @@ const RecipeView = ({ recipes }) => {
                 key={recipes.id}
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
-              >
-                content
-              </section>
+              ></section>
               <section className="top" key={recipes.id}>
                 <div className="title">{recipe.title}</div>
                 <div className="subtitle"></div>
                 <div className="right-side">
-                  <div className="rating">
+                  <div className="score">
                     <link
                       rel="stylesheet"
                       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -119,20 +117,45 @@ const RecipeView = ({ recipes }) => {
                 </div>
               </section>
               <section className="left" key={recipes.id}>
-                left
+                <h1>Ingredients</h1>
+                <br />
+                <ul>
+                  {recipe.ingredients.split("\n").map((line, index) => (
+                    line.length > 0 && (
+                    <li key={index} className="ingredients">
+                      {line}
+                    </li>)
+                  ))}
+                </ul>
+                <br />
+                <h1>Notes</h1>
+                <br/>
+                <ul style={{ listStyleType: "none" }}>
+                  {recipe.notes.split("\n").map((line, index) => (
+                    line.length > 0 && (
+                        <li key={index} className="ingredients notes">
+                        {line}
+                      </li>
+                    ) 
+        
+                  ))}
+                </ul>
               </section>
               <section className="right" key={recipes.id}>
-                right
+                <h1>Instructions</h1>
+                <br />
+                <ol>
+                  {recipe.instructions.split("\n").map(
+                    (line, index) =>
+                      line.length > 0 && (
+                        <li className="ingredients instructions" key={index}>
+                          {line}
+                        </li>
+                      )
+                  )}
+                </ol>
               </section>
-              <section className="bottom" key={recipes.id}>
-                bottom
-              </section>
-              {/* <h1>{recipe.title}</h1>
-              <ol>
-                {recipe.instructions.split("\n").map((line, index) => (
-                  <li key={index}>{line}</li>
-                ))}
-              </ol> */}
+              <section className="bottom" key={recipes.id}></section>
             </>
           )
       )}
