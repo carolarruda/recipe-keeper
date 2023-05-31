@@ -54,6 +54,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
       ingredients,
       instructions,
       notes,
+
     };
 
     const postOpts = {
@@ -70,7 +71,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         fetch("http://localhost:4000/recipes")
           .then((response) => response.json())
           .then((data) => {
-            navigate("/");
+            navigate(`/${params.id}`);
             setRecipes(data);
           });
       });

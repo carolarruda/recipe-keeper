@@ -1,14 +1,16 @@
 import "./App.css";
 import SideBar from "./components/SideBar";
 import Main from "./components/Main";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import NewRecipe from "./components/NewRecipe";
 import RecipeView from "./components/RecipeView";
 import { useEffect, useState } from "react";
 import EditRecipe from "./components/EditRecipe";
 
+
 function App() {
   const [recipes, setRecipes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:4000/recipes")
@@ -31,7 +33,6 @@ function App() {
   const handleDelete = (id) => {
     const filteredRecipes = recipes.filter((recipe) => {
       if (recipe.id !== id) {
-        console.log("recipe", recipe);
         return recipe;
       }
     });
@@ -47,6 +48,7 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
             setRecipes(data);
+            navigate('/')
           });
       });
   };

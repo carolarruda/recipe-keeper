@@ -69,6 +69,7 @@ const NewRecipe = ({ recipes, setRecipes }) => {
       ingredients,
       instructions,
       notes,
+      liked: false
     };
     const opts = {
       method: "POST",

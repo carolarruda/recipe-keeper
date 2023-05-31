@@ -23,8 +23,8 @@ const SideBar = ({ className }) => {
       </button>
      
       <form className="center-it form-style">
-        <label></label>
-        <input type="text" placeholder="🔍 Search recipes" />
+        <label htmlFor="search-online"></label>
+        <input id="search-online" type="text" placeholder="Search recipes" />
       </form>
       <div className="grid-menu">
         <Link to={"add-new-recipe"} style={{ textDecoration: "none" }}>

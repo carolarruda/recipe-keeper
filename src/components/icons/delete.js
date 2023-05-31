@@ -7,14 +7,13 @@ const Delete = ({show, fill}) => {
          xmlnsXlink="http://www.w3.org/1999/xlink" 
          x="0px" 
          y="0px" 
-         width="40px" 
-         height="40px" 
+         width="30px"
+         height="30px"
          viewBox="0 0 122.88 122.88" 
          enableBackground="new 0 0 122.88 122.88" 
          xmlSpace="preserve"
          fill={fill}
 
-   
          >
           <g  fillRule="evenodd" clipRule="evenodd">
             <path 
