@@ -94,15 +94,17 @@ const Main = ({
                 filter: isHovered
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
-                minHeight: isHovered ? "280px" : "275px",
-                minWidth: isHovered ? "300px" : "295px",
+                // minHeight: isHovered ? "280px" : "275px",
+                // minWidth: isHovered ? "300px" : "295px",
+               
               };
               const cardBox = {
                 backgroundColor: isHovered ? "#c5e2e7" : "#d8dfe6",
-                borderBottom: isHovered
-                  ? "3px solid #9ecdd4"
-                  : "3px solid transparent",
+                borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
+                transform: isHovered ? "translateY(-5px)" : "translateY(0px)",
+                transition: "background-color 0.3s, border-bottom 0.3s, transform 0.3s"
               };
+              
               const show = {
                 fill: isHovered ? "#30505b" : "transparent",
                 padding: "3px",

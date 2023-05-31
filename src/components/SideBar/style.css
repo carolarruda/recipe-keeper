@@ -60,6 +60,7 @@
     border-left: 4px solid transparent;
     height: 45px;
     padding-left: 10px;
+    transition: background-color 0.3s, border-left 0.3s, transform 0.3s;
  
 
     }
@@ -105,10 +106,12 @@ color: rgb(114, 114, 143);
   border-radius: 0;
   transition: border-color 0.3s ease;
   font-weight: 600;
+  transition: font-size 0.3s;
 }
 
 #search-online:hover {
   border-color: #64648c;
+
 }
 
 #search-online:focus {
