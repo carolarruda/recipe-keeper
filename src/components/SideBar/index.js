@@ -4,10 +4,18 @@ import Plus from "../icons/plus";
 import HomeIcon from "../icons/homeIcon";
 import Like from "../icons/like";
 import Settings from "../icons/settings";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 const SideBar = ({ className }) => {
+  const [setings, setSettings] = useState('')
+  const [home, setHome] = useState ('')
+  const [favorites, setFavorites] = useState ('')
+  const [add, setAdd] = useState ('')
+
+
+
   return (
     <div className={className}>
       <button className="options-icon remove">
@@ -20,29 +28,29 @@ const SideBar = ({ className }) => {
       </form>
       <div className="grid-menu">
         <Link to={"add-new-recipe"} style={{ textDecoration: "none" }}>
-          <div className="grid-menu-two btn-add">
-            <Plus />
+          <div className="grid-menu-two btn-add" onMouseEnter={()=> setAdd('white')} onMouseLeave={()=> setAdd('#64648C')} >
+            <Plus fill={add} />
             <button className="remove">Add new recipes</button>
           </div>
         </Link>
 
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <div className="grid-menu-two btn-add">
-            <HomeIcon />
+          <div className="grid-menu-two btn-add" onMouseEnter={()=> setHome('white')} onMouseLeave={()=> setHome('#64648C')}>
+            <HomeIcon fill={home}/>
             <button className="remove"> Home</button>
           </div>
         </Link>
 
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <div className="grid-menu-two btn-add">
-            <Like />
+          <div className="grid-menu-two btn-add" onMouseEnter={()=> setFavorites('white')} onMouseLeave={()=> setFavorites('#64648C')}>
+            <Like fill={favorites}/>
             <button className="remove">Favorites</button>
           </div>
         </Link>
         
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <div className="grid-menu-two btn-add">
-          <Settings />
+          <div className="grid-menu-two btn-add" onMouseEnter={()=> setSettings('white')} onMouseLeave={()=> setSettings('#64648C')} >
+          <Settings fill={setings} />
             <button className="remove">Settings</button>
           </div>
         </Link>

@@ -1,4 +1,4 @@
-const Settings = () => {
+const Settings = ({fill}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const Settings = () => {
       enableBackground="new 0 0 122.881 122.88"
       xmlSpace="preserve"
       width={'20px'}
-      fill='#64648C'
+      fill={fill}
     >
       <g>
         <path

@@ -1,4 +1,4 @@
-const HomeIcon = ({ colour = "#64648C" }) => {
+const HomeIcon = ({ colour = "#64648C", fill }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +10,7 @@ const HomeIcon = ({ colour = "#64648C" }) => {
     >
       <g
         fillOpacity="0.8"
-        fill='#64648C'
+        fill={fill}
         fillRule="nonzero"
         stroke="none"
         strokeWidth="1"
