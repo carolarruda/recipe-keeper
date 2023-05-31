@@ -8,7 +8,7 @@ const Settings = ({fill}) => {
       viewBox="0 0 122.881 122.88"
       enableBackground="new 0 0 122.881 122.88"
       xmlSpace="preserve"
-      width={'20px'}
+      width={'25px'}
       fill={fill}
     >
       <g>

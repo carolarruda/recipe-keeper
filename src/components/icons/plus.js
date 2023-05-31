@@ -2,7 +2,7 @@ const Plus = ({fill}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={"15px"}
+      width={"20px"}
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"

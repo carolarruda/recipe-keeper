@@ -30,7 +30,10 @@ const Main = ({
     });
 
     setRecipes(likedRecipe);
-    setIsLiked(likedRecipe.find((item) => item.id === id)?.liked || false);
+
+    const isRecipeLiked =
+      likedRecipe.find((item) => item.id === id)?.liked || false;
+    setIsLiked(isRecipeLiked);
 
     if (isLiked) {
       const dislike = {
@@ -90,7 +93,7 @@ const Main = ({
                 backgroundImage: `url(${item.photo})`,
                 filter: isHovered
                   ? "brightness(95%)"
-                  : "blur(1px) brightness(90%)",
+                  : "blur(1px) brightness(90%) grayscale(30%)",
                 minHeight: isHovered ? "280px" : "275px",
                 minWidth: isHovered ? "300px" : "295px",
               };
