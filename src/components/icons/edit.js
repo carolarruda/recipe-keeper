@@ -1,4 +1,4 @@
-const Edit = ({ show }) => {
+const Edit = ({ show, fill }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +10,7 @@ const Edit = ({ show }) => {
       xmlSpace="preserve"
       width="40px"
       height="40px"
+      fill={fill}
     >
       <style type="text/css">
         {`.st0{fill-rule:evenodd;clip-rule:evenodd;}`}

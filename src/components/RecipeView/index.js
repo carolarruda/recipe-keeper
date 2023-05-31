@@ -2,8 +2,11 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import Serving from "../icons/serving";
 import Clock from "../icons/clock";
+import Delete from "../icons/delete";
+import Edit from "../icons/edit";
+import { Link } from "react-router-dom";
 
-const RecipeView = ({ recipes }) => {
+const RecipeView = ({ recipes, setRecipes, handleDelete, hoveredCard }) => {
   const params = useParams();
 
   const calcTime = () => {
@@ -34,14 +37,27 @@ const RecipeView = ({ recipes }) => {
   return (
     <div className="grid-container">
       {recipes.map(
-        (recipe) =>
-          recipe.id.toString() === `${params.id}` && (
+        (recipe, index) => {
+
+          return recipe.id.toString() === `${params.id}` && (
             <>
               <section
                 key={recipes.id}
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
-              ></section>
+              >
+                   <div className="icons-container">
+                  <button
+                    onClick={() => handleDelete(recipe.id)}
+                    className="btn-no-style"
+                  >
+                    <Delete fill={"#9ecdd4"} />
+                  </button>
+                  <Link to={`recipes/edit/${recipe.id}`}>
+                    <Edit fill={"#9ecdd4"}/>
+                  </Link>
+                </div>
+              </section>
               <section className="top" key={recipes.id}>
                 <div className="title">{recipe.title}</div>
                 <div className="subtitle"></div>
@@ -120,25 +136,27 @@ const RecipeView = ({ recipes }) => {
                 <h1>Ingredients</h1>
                 <br />
                 <ul>
-                  {recipe.ingredients.split("\n").map((line, index) => (
-                    line.length > 0 && (
-                    <li key={index} className="ingredients">
-                      {line}
-                    </li>)
-                  ))}
+                  {recipe.ingredients.split("\n").map(
+                    (line, index) =>
+                      line.length > 0 && (
+                        <li key={index} className="ingredients">
+                          {line}
+                        </li>
+                      )
+                  )}
                 </ul>
                 <br />
                 <h1>Notes</h1>
-                <br/>
+                <br />
                 <ul style={{ listStyleType: "none" }}>
-                  {recipe.notes.split("\n").map((line, index) => (
-                    line.length > 0 && (
+                  {recipe.notes.split("\n").map(
+                    (line, index) =>
+                      line.length > 0 && (
                         <li key={index} className="ingredients notes">
-                        {line}
-                      </li>
-                    ) 
-        
-                  ))}
+                          {line}
+                        </li>
+                      )
+                  )}
                 </ul>
               </section>
               <section className="right" key={recipes.id}>
@@ -158,6 +176,8 @@ const RecipeView = ({ recipes }) => {
               <section className="bottom" key={recipes.id}></section>
             </>
           )
+        }
+          
       )}
     </div>
   );

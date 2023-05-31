@@ -1,4 +1,4 @@
-const Delete = ({show}) => {
+const Delete = ({show, fill}) => {
 
     return (
         <svg 
@@ -12,6 +12,7 @@ const Delete = ({show}) => {
          viewBox="0 0 122.88 122.88" 
          enableBackground="new 0 0 122.88 122.88" 
          xmlSpace="preserve"
+         fill={fill}
 
    
          >

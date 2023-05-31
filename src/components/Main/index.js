@@ -4,41 +4,8 @@ import { useState } from "react";
 import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 
-const Main = ({ className, recipes, setRecipes }) => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+const Main = ({ className, recipes, setRecipes, hoveredCard, handleHoverIn, handleHoverOut, handleDelete }) => {
 
-  const handleHoverIn = (index) => {
-    setHoveredCard(index);
-  };
-
-  const handleHoverOut = () => {
-    setHoveredCard(null);
-  };
-
-  const handleDelete = (id) => {
-    console.log("Delete ID:", id);
-
-    const filteredRecipes = recipes.filter((recipe) => {
-      if (recipe.id !== id) {
-        console.log("recipe", recipe);
-        return recipe;
-      }
-    });
-    setRecipes(filteredRecipes);
-
-    const opts = {
-      method: "DELETE",
-    };
-    fetch(`http://localhost:4000/recipes/${id}`, opts)
-      .then((response) => response.json())
-      .then(() => {
-        fetch("http://localhost:4000/recipes")
-          .then((res) => res.json())
-          .then((data) => {
-            setRecipes(data);
-          });
-      });
-  };
 
   return (
     <>
@@ -72,6 +39,8 @@ const Main = ({ className, recipes, setRecipes }) => {
                 textDecoration: "none",
                 color: "#808080",
                 display: "grid",
+                textAlign: "left",
+                paddingLeft: "5px"
               };
 
               return (
@@ -96,8 +65,8 @@ const Main = ({ className, recipes, setRecipes }) => {
 
                   <Link to={`${item.id}`} style={styleForphoto}>
                     <div className="recipe-photo" style={boxstyle}></div>
-                    {item.title}
                   </Link>
+                  <div  className="recipe-name">{item.title}</div>
                 </div>
               );
             })}
