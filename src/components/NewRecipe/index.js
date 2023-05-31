@@ -70,7 +70,6 @@ const NewRecipe = ({ recipes, setRecipes }) => {
       instructions,
       notes,
     };
-    console.log("new recipe", newRecipe);
     const opts = {
       method: "POST",
       headers: {
@@ -82,7 +81,6 @@ const NewRecipe = ({ recipes, setRecipes }) => {
     fetch("http://localhost:4000/recipes", opts)
       .then((response) => response.json())
       .then(() => {
-        setRecipes(recipes);
         navigate(`/`);
         setTitle("");
         setPhoto("");

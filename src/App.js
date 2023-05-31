@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom'
 import NewRecipe from "./components/NewRecipe";
 import RecipeView from "./components/RecipeView";
 import { useEffect, useState } from 'react'
+import EditRecipe from "./components/EditRecipe";
 
 
 
@@ -19,6 +20,8 @@ function App() {
   })
   }, [])
 
+  
+
   return (
     <div className="grid">
       <SideBar className="nav-container" />
@@ -29,6 +32,9 @@ function App() {
         element={<NewRecipe setRecipes={setRecipes} recipes={recipes}/>}/>
         <Route path='/:id'
         element={<RecipeView recipes={recipes} />}/>
+        <Route path="/recipes/edit/:id"
+        element={<EditRecipe recipes={recipes} setRecipes={setRecipes}/>}
+        />
       </Routes>
      
     </div>

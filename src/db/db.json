@@ -3,18 +3,18 @@
     {
       "title": "Tomato Salad",
       "photo": "https://images.unsplash.com/photo-1623855244069-3594654e5e42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
-      "rating": "5",
+      "rating": "1",
       "course": "entree",
       "prep": "00:10",
       "cook": "00:50",
-      "servings": "4",
+      "servings": "1",
       "ingredients": "4 ripe tomatoes (180g/ 6oz each) (Note 1)\n1 1/2 tsp finely minced eschalots (US: shallots) (Note 2)\n1/2 tsp finely minced garlic (use a knife, not garlic press)\n1 tbsp white wine vinegar (Note 3)\n3 tbsp extra virgin olive oil\n3/4 tsp cooking / kosher salt\n2 pinches white pepper\n1 1/2 tbsp finely sliced basil leaves",
       "instructions": "    Cut the tomatoes into 8 or 10 wedges, cutting out the core. Place in a large bowl.\n    Sprinkle over eschallots, garlic, salt and pepper. Drizzle with olive oil and vinegar.\n    Gently toss to coat tomatoes. Add basil, toss again to disperse.\n    Pour into bowl and serve immediately! (Tip: Bread for mopping up the tomato juices is on point).",
       "notes": "",
       "id": 1
     },
     {
-      "title": "Creamy Vegan Harissa Pasta",
+      "title": "Vegan Harissa Pasta",
       "photo": "https://cdn.pickuplimes.com/cache/a1/c6/a1c6de57c148dc9f7159fc94c4d67727.jpg",
       "rating": "2",
       "course": "main",
@@ -40,23 +40,10 @@
       "id": 3
     },
     {
-      "title": "Chocolate Quente",
-      "photo": "https://joyfoodsunshine.com/wp-content/uploads/2020/11/homemade-hot-chocolate-recipe-4.jpg",
-      "rating": "5",
-      "course": "dessert",
-      "prep": "00:20",
-      "cook": "02:00",
-      "servings": "4",
-      "ingredients": "2 cup leite (gordo)\n30 ml cacau em pó\n30 ml açúcar \n¼ cup de pedaços de chocolate\n0,6 ml tsp extracto de baunilha\n",
-      "instructions": "Coloque o leite, o cacau em pó e o açúcar numa panela pequena. Aqueça em lume médio/médio-baixo, mexendo sempre, até aquecer (mas sem ferver). Adicione as gotas de chocolate e bata constantemente até que o chocolate derreta. Adicione o extrato de baunilha, sirva imediatamente.",
-      "notes": "Sirva com chatili e mashmallows, raspe chocolate\nWebsite: \nhttps://celebratingsweets.com/homemade-hot-chocolate/#recipe",
-      "id": 4
-    },
-    {
       "title": "Bolonhesa de Soja",
       "photo": "https://auchaneeu.auchan.pt/content/uploads/2021/05/AE_FL_bolonhesa_soja.jpg",
-      "rating": "2",
-      "course": "main",
+      "rating": "5",
+      "course": "dessert",
       "prep": "00:30",
       "cook": "00:20",
       "servings": "6",

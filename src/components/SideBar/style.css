@@ -72,7 +72,9 @@
     }
     .btn-add:hover .remove {
       color: rgb(62, 128, 146);
-      color: white
+      color: white;
+      font-weight: 600;
+      
     }
 
     

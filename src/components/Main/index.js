@@ -20,29 +20,24 @@ const Main = ({ className, recipes, setRecipes }) => {
 
     const filteredRecipes = recipes.filter((recipe) => {
       if (recipe.id !== id) {
-        console.log('recipe', recipe)
-        return recipe
+        console.log("recipe", recipe);
+        return recipe;
       }
-    })
+    });
     setRecipes(filteredRecipes);
 
     const opts = {
       method: "DELETE",
-    }
+    };
     fetch(`http://localhost:4000/recipes/${id}`, opts)
-    .then((response)=> response.json())
-    .then(()=> {
-      fetch("http://localhost:4000/recipes")
-      .then((res)=> res.json())
-      .then((data)=> {
-        setRecipes(data)
-      })
-    })
-
-  };
-
-  const handleEdit = () => {
-    console.log("Edit action");
+      .then((response) => response.json())
+      .then(() => {
+        fetch("http://localhost:4000/recipes")
+          .then((res) => res.json())
+          .then((data) => {
+            setRecipes(data);
+          });
+      });
   };
 
   return (
@@ -94,9 +89,9 @@ const Main = ({ className, recipes, setRecipes }) => {
                     >
                       <Delete show={show} />
                     </button>
-                    <button onClick={handleEdit} className="btn-no-style">
+                    <Link to={`recipes/edit/${item.id}`}>
                       <Edit show={show} />
-                    </button>
+                    </Link>
                   </div>
 
                   <Link to={`${item.id}`} style={styleForphoto}>

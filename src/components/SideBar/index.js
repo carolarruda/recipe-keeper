@@ -9,10 +9,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SideBar = ({ className }) => {
-  const [setings, setSettings] = useState('')
-  const [home, setHome] = useState ('')
-  const [favorites, setFavorites] = useState ('')
-  const [add, setAdd] = useState ('')
+  const [setings, setSettings] = useState ('#64648C')
+  const [home, setHome] = useState ('#64648C')
+  const [favorites, setFavorites] = useState ('#64648C')
+  const [add, setAdd] = useState ('#64648C')
 
 
 
