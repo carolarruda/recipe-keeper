@@ -24,7 +24,7 @@ function App() {
       <SideBar className="nav-container" />
       <Routes>
         <Route path='/'
-        element={<Main className="main-container" recipes={recipes} />}/>
+        element={<Main className="main-container" recipes={recipes} setRecipes={setRecipes}/>}/>
         <Route path='/add-new-recipe'
         element={<NewRecipe setRecipes={setRecipes} recipes={recipes}/>}/>
         <Route path='/:id'

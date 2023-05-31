@@ -2,7 +2,7 @@ import "./style.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const NewRecipe = ({ recipes, setRecipes }) => {
+const EditRecipe = ({ recipes, setRecipes }) => {
   const [title, setTitle] = useState("");
   const [photo, setPhoto] = useState("");
   const [rating, setRating] = useState("");
@@ -58,6 +58,18 @@ const NewRecipe = ({ recipes, setRecipes }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log({
+      title,
+      photo,
+      rating,
+      course,
+      prep,
+      cook,
+      servings,
+      ingredients,
+      instructions,
+      notes,
+    });
     const newRecipe = {
       title,
       photo,
@@ -270,4 +282,4 @@ const NewRecipe = ({ recipes, setRecipes }) => {
   );
 };
 
-export default NewRecipe;
+export default EditRecipe;

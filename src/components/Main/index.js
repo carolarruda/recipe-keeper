@@ -4,7 +4,7 @@ import { useState } from "react";
 import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 
-const Main = ({ className, recipes }) => {
+const Main = ({ className, recipes, setRecipes }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleHoverIn = (index) => {
@@ -13,6 +13,36 @@ const Main = ({ className, recipes }) => {
 
   const handleHoverOut = () => {
     setHoveredCard(null);
+  };
+
+  const handleDelete = (id) => {
+    console.log("Delete ID:", id);
+
+    const filteredRecipes = recipes.filter((recipe) => {
+      if (recipe.id !== id) {
+        console.log('recipe', recipe)
+        return recipe
+      }
+    })
+    setRecipes(filteredRecipes);
+
+    const opts = {
+      method: "DELETE",
+    }
+    fetch(`http://localhost:4000/recipes/${id}`, opts)
+    .then((response)=> response.json())
+    .then(()=> {
+      fetch("http://localhost:4000/recipes")
+      .then((res)=> res.json())
+      .then((data)=> {
+        setRecipes(data)
+      })
+    })
+
+  };
+
+  const handleEdit = () => {
+    console.log("Edit action");
   };
 
   return (
@@ -28,7 +58,6 @@ const Main = ({ className, recipes }) => {
                 filter: isHovered
                   ? "brightness(100%)"
                   : "blur(1px) brightness(90%)",
-
                 minHeight: isHovered ? "290px" : "285px",
                 minWidth: isHovered ? "290px" : "285px",
               };
@@ -51,23 +80,30 @@ const Main = ({ className, recipes }) => {
               };
 
               return (
-                <>
-                  <div
-                    className="box"
-                    style={cardBox}
-                    onMouseEnter={() => handleHoverIn(index)}
-                    onMouseLeave={handleHoverOut}
-                  >
-                    <div className="icons-container">
+                <div
+                  className="box"
+                  style={cardBox}
+                  onMouseEnter={() => handleHoverIn(index)}
+                  onMouseLeave={handleHoverOut}
+                  key={item.id}
+                >
+                  <div className="icons-container">
+                    <button
+                      onClick={() => handleDelete(item.id)}
+                      className="btn-no-style"
+                    >
                       <Delete show={show} />
+                    </button>
+                    <button onClick={handleEdit} className="btn-no-style">
                       <Edit show={show} />
-                    </div>
-                    <Link key={item.id} to={`${item.id}`} style={styleForphoto}>
-                      <div className="recipe-photo" style={boxstyle}></div>
-                      {item.title}
-                    </Link>
+                    </button>
                   </div>
-                </>
+
+                  <Link to={`${item.id}`} style={styleForphoto}>
+                    <div className="recipe-photo" style={boxstyle}></div>
+                    {item.title}
+                  </Link>
+                </div>
               );
             })}
         </section>
