@@ -203,11 +203,12 @@ const handleDeleteWeb = (id) => {
 
                 return (
                   <div
-                  className="box"
+                  className="box test"
                   style={cardBox}
                   onMouseEnter={() => handleHoverIn(index, true)} 
                   onMouseLeave={() => handleHoverOut(true)} 
                   key={website.id}
+                
                   >
                     <div className="icons-container">
                       <button
@@ -216,7 +217,7 @@ const handleDeleteWeb = (id) => {
                       >
                         <Delete show={show} />
                       </button>
-                      <Link to={`recipes/edit/${website.id}`}>
+                      <Link to={`websites/edit/${website.id}`}>
                         <Edit show={show} />
                       </Link>
                       <button
@@ -227,7 +228,9 @@ const handleDeleteWeb = (id) => {
                     </div>
 
                     <Link to={`${website.url}`} style={styleForphoto}>
-                      <div className="recipe-photo" style={boxstyle}></div>
+                      <div className="recipe-photo" 
+                      id="remove-border-radius"
+                      style={boxstyle}></div>
                     </Link>
                     <div className="recipe-name">{website.name}</div>
                   </div>

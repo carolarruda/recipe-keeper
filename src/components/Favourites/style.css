@@ -95,6 +95,10 @@ color: rgb(100, 100, 140);;
   color: rgb(101, 100, 100);
 }
 
+#remove-border-radius{
+  border-radius: 15%;
+}
+
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -106,3 +110,5 @@ color: rgb(100, 100, 140);;
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+

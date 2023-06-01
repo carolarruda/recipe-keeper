@@ -143,10 +143,22 @@
   ],
   "websites": [
     {
-      "name": "TEST",
-      "image": "https://www.pickuplimes.com/static/images/index_headers/recipe-index-header-compressed.7078caf7b9aa.jpeg",
+      "name": "Pick Up Limes",
+      "image": "https://www.pickuplimes.com/static/images/logo/pul_logo_round_300_326.c5a66ddd248a.png",
       "url": "https://www.pickuplimes.com/",
-      "id": 1
+      "id": 2
+    },
+    {
+      "name": "Cookie + Kate",
+      "image": "https://download.cnet.com/a/img/resize/bfa8575e8a3c61066e2b9dc8264082abff09f767/catalog/2020/05/11/b84ef40b-b6e3-4b63-aaf2-aa0283d709af/imgingest-8676716563213811209.png?auto=webp&fit=crop&width=64",
+      "url": "https://cookieandkate.com/",
+      "id": 3
+    },
+    {
+      "name": "ssss",
+      "image": "",
+      "url": "",
+      "id": 4
     }
   ]
 }

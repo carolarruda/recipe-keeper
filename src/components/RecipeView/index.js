@@ -6,7 +6,7 @@ import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 import { Link } from "react-router-dom";
 
-const RecipeView = ({ recipes, setRecipes, handleDelete, hoveredCard }) => {
+const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard }) => {
   const params = useParams();
 
   const calcTime = () => {
@@ -48,7 +48,7 @@ const RecipeView = ({ recipes, setRecipes, handleDelete, hoveredCard }) => {
               >
                    <div className="icons-container">
                   <button
-                    onClick={() => handleDelete(recipe.id)}
+                    onClick={() => handleDeleteRecipe(recipe.id)}
                     className="btn-no-style"
                   >
                     <Delete fill={"#9ecdd4"} />

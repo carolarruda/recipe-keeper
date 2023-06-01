@@ -8,6 +8,7 @@ import RecipeView from "./components/RecipeView";
 import { useEffect, useState } from "react";
 import EditRecipe from "./components/EditRecipe";
 import NewWebsite from "./components/NewWebsite";
+import EditWebsite from "./components/EditWebsite";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -69,6 +70,29 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
             setRecipes(data);
+          });
+      });
+  };
+
+  const handleDeleteRecipe = (id) => {
+    const filteredRecipes = recipes.filter((recipe) => {
+      if (recipe.id !== id) {
+        return recipe;
+      }
+    });
+    setRecipes(filteredRecipes);
+
+    const opts = {
+      method: "DELETE",
+    };
+    fetch(`http://localhost:4000/recipes/${id}`, opts)
+      .then((response) => response.json())
+      .then(() => {
+        fetch("http://localhost:4000/recipes")
+          .then((res) => res.json())
+          .then((data) => {
+            setRecipes(data);
+            navigate(-1)
           });
       });
   };
@@ -148,6 +172,7 @@ function App() {
               recipes={recipes}
               setRecipes={setRecipes}
               handleDelete={handleDelete}
+              handleDeleteRecipe={handleDeleteRecipe}
             />
           }
         />
@@ -159,7 +184,7 @@ function App() {
               setRecipes={setRecipes}
               handleDelete={handleDelete}
               handleDeleteWeb={handleDeleteWeb}
-
+              handleDeleteRecipe={handleDeleteRecipe}
             />
           }
         />
@@ -174,6 +199,10 @@ function App() {
         <Route
           path="/favourites/:id/recipes/edit/:id"
           element={<EditRecipe recipes={recipes} setRecipes={setRecipes} />}
+        />
+        <Route
+          path="/favourites/websites/edit/:id"
+          element={<EditWebsite websites={websites} setWebsites={setWebsites} />}
         />
       </Routes>
     </div>
