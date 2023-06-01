@@ -6,7 +6,7 @@ import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 import { Link } from "react-router-dom";
 
-const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard }) => {
+const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, theme }) => {
   const params = useParams();
 
   const calcTime = () => {
@@ -46,15 +46,15 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard }) =>
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
               >
-                   <div className="icons-container">
+                   <div className="icons-container margin-add">
                   <button
                     onClick={() => handleDeleteRecipe(recipe.id)}
                     className="btn-no-style"
                   >
-                    <Delete fill={"#9ecdd4"} />
+                    <Delete fill={theme} />
                   </button>
-                  <Link to={`recipes/edit/${recipe.id}`}>
-                    <Edit fill={"#9ecdd4"}/>
+                  <Link to={`recipes/edit/${recipe.id}`} style={{margin: "10px"}}>
+                    <Edit fill={theme}/>
                   </Link>
                 </div>
               </section>

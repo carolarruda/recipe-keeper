@@ -15,6 +15,8 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const navigate = useNavigate();
   const [websites, setWebsites] = useState([]);
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
   const [theme, setTheme] = useState(() => {
     const localValue = localStorage.getItem("THEME");
     if (localValue == null) return [];
@@ -46,8 +48,6 @@ function App() {
     localStorage.setItem("THEME", JSON.stringify(theme));
   }, [theme]);
 
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
 
   const handleHoverIn = (index, isSecondCard) => {
     if (isSecondCard) {
@@ -187,6 +187,7 @@ function App() {
               setRecipes={setRecipes}
               handleDelete={handleDelete}
               handleDeleteRecipe={handleDeleteRecipe}
+              theme={theme}
             />
           }
         />
@@ -199,6 +200,7 @@ function App() {
               handleDelete={handleDelete}
               handleDeleteWeb={handleDeleteWeb}
               handleDeleteRecipe={handleDeleteRecipe}
+              theme={theme}
             />
           }
         />
