@@ -24,7 +24,6 @@ function App() {
   });
 
   const handleTheme = (e) => {
-    console.log(e.target.value);
     setTheme(e.target.value);
   };
 
@@ -161,7 +160,7 @@ function App() {
   return (
     <div className="grid">
       <SideBar
-        className="nav-container"
+        className="nav-container" 
         theme={theme}
         setRecipes={setRecipes}
         recipes={recipes}
