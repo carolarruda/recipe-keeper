@@ -121,11 +121,19 @@ function App() {
       });
   }
 
+  const [theme, setTheme]=useState('')
+
+
+  const handleTheme = (e) => {
+    console.log(e.target.value);
+    setTheme(e.target.value)
+  }
+
 
 
   return (
     <div className="grid">
-      <SideBar className="nav-container" />
+      <SideBar className="nav-container" theme={theme} />
       <Routes>
         <Route
           path="/"
@@ -207,7 +215,7 @@ function App() {
         />
         <Route
           path="/settings"
-          element={<Settings   className="main-container"/>}
+          element={<Settings   className="main-container"  handleTheme={handleTheme}/>}
         />
       </Routes>
     </div>

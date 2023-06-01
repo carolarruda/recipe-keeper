@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./style.css";
+import "../styles/style.css";
 import Serving from "../icons/serving";
 import Clock from "../icons/clock";
 import Delete from "../icons/delete";
