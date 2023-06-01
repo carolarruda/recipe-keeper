@@ -17,6 +17,7 @@ const Favourites = ({
   handleDelete,
   websites,
   setWebsites,
+  theme
 }) => {
 
   const [isLiked, setIsLiked] = useState(true);
@@ -92,7 +93,7 @@ const handleDeleteWeb = (id) => {
 
               };
               const cardBox = {
-                backgroundColor: isHovered ? "#c5e2e7" : "#d8dfe6",
+                backgroundColor: isHovered ? `${theme}` : "#d8dfe6",   
 
                 transform: isHovered ? "translateY(-5px)" : "translateY(0px)",
                 transition:
@@ -178,7 +179,7 @@ const handleDeleteWeb = (id) => {
                 // minWidth: isHovered ? "300px" : "295px",
               };
               const cardBox = {
-                backgroundColor: isHoveredTwo ? "#c5e2e7" : "#d8dfe6",
+                backgroundColor: isHoveredTwo ? `${theme}` : "#d8dfe6",   
                 // borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
                 transform: isHoveredTwo ? "translateY(-5px)" : "translateY(0px)",
                 transition:

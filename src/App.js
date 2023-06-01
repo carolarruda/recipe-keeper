@@ -14,7 +14,17 @@ import Settings from "./components/Settings";
 function App() {
   const [recipes, setRecipes] = useState([]);
   const navigate = useNavigate();
-  const [websites, setWebsites] = useState([])
+  const [websites, setWebsites] = useState([]);
+  const [theme, setTheme] = useState(() => {
+    const localValue = localStorage.getItem("THEME");
+    if (localValue == null) return [];
+    return JSON.parse(localValue);
+  });
+
+  const handleTheme = (e) => {
+    console.log(e.target.value);
+    setTheme(e.target.value);
+  };
 
   useEffect(() => {
     fetch("http://localhost:4000/recipes")
@@ -32,7 +42,9 @@ function App() {
       });
   }, []);
 
-
+  useEffect(() => {
+    localStorage.setItem("THEME", JSON.stringify(theme));
+  }, [theme]);
 
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
@@ -93,7 +105,7 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
             setRecipes(data);
-            navigate(-1)
+            navigate(-1);
           });
       });
   };
@@ -105,7 +117,7 @@ function App() {
       }
     });
     setWebsites(filteredWebsites);
-  
+
     const opts = {
       method: "DELETE",
     };
@@ -116,18 +128,9 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
             setWebsites(data);
-           
           });
       });
-  }
-
-  const [theme, setTheme]=useState('')
-
-
-  const handleTheme = (e) => {
-    console.log(e.target.value);
-    setTheme(e.target.value)
-  }
+  };
 
 
 
@@ -146,6 +149,7 @@ function App() {
               handleHoverIn={handleHoverIn}
               handleHoverOut={handleHoverOut}
               handleDelete={handleDelete}
+              theme={theme}
             />
           }
         />
@@ -161,8 +165,9 @@ function App() {
               handleDelete={handleDelete}
               hoveredCard={hoveredCard}
               hoveredCardTwo={hoveredCardTwo}
-              setWebsites={setWebsites} 
+              setWebsites={setWebsites}
               websites={websites}
+              theme={theme}
             />
           }
         />
@@ -211,11 +216,15 @@ function App() {
         />
         <Route
           path="/favourites/websites/edit/:id"
-          element={<EditWebsite websites={websites} setWebsites={setWebsites} />}
+          element={
+            <EditWebsite websites={websites} setWebsites={setWebsites} />
+          }
         />
         <Route
           path="/settings"
-          element={<Settings   className="main-container"  handleTheme={handleTheme}/>}
+          element={
+            <Settings className="main-container" handleTheme={handleTheme} />
+          }
         />
       </Routes>
     </div>

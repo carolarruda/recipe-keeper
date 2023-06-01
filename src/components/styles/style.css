@@ -450,13 +450,12 @@ h1 {
 
 #blue {
   background-color: rgb(158, 175, 245);
-  background-color: rgb(155, 169, 237);
+
   color: white;
 }
 
 #orange {
-  background-color: rgb(255, 179, 5);
-
+  background-color: rgba(247, 179, 21, 0.916);
 }
 
 
@@ -518,8 +517,8 @@ h1 {
     }
     
     .btn-add:hover {
-      border-left: 4px solid rgb(62, 128, 146);
-      background-color: rgb(158, 205, 212);
+      border-left: 4px solid rgb(227, 87, 79);
+      background-color:rgb(136, 136, 190);
       cursor: pointer;
  
     }

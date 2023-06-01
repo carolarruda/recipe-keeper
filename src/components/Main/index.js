@@ -14,6 +14,7 @@ const Main = ({
   handleHoverIn,
   handleHoverOut,
   handleDelete,
+  theme
 }) => {
   const [isLiked, setIsLiked] = useState(false);
 
@@ -99,8 +100,7 @@ const Main = ({
                
               };
               const cardBox = {
-                backgroundColor: isHovered ? "#c5e2e7" : "#d8dfe6",
-                // borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
+                backgroundColor: isHovered ? `${theme}` : "#d8dfe6",                // borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
                 transform: isHovered ? "translateY(-5px)" : "translateY(0px)",
                 transition: "background-color 0.3s, border-bottom 0.3s, transform 0.3s"
               };

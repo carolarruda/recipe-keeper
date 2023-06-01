@@ -17,7 +17,7 @@ const SideBar = ({ className, theme }) => {
 
 
   return (
-    <div className={className} id={theme}>
+    <div className={className} style={{backgroundColor: theme}}>
       <button className="options-icon remove">
       <Options />
       </button>
