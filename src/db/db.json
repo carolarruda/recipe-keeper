@@ -12,7 +12,7 @@
       "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
       "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
       "id": 2,
-      "liked": false
+      "liked": true
     },
     {
       "title": "Strogonoff de grão",
@@ -67,7 +67,7 @@
       "ingredients": "soja granulada (500g);\n1 cebola picada;\n3 dentes de alho picados;\n2 cup de polpa de tomate;\n1 pimento amarelo;\n1 pimento vermelho;\nOrégãos a gosto;\nPimenta a gosto;\nPaprika a gosto;\nSal a gosto;",
       "instructions": " Cozinhar a soja seguindo as instruções do pacote\n Faça um refogado com a cebola e os dentes de alho até ficarem translucidos.\n Adicione a soja, a polpa de tomate, os pimentos e os temperos. Deixe cozinhar mais alguns minutos.\nRetificar os temperos e já está. ",
       "notes": "YOOO",
-      "liked": true,
+      "liked": false,
       "id": 7
     },
     {
@@ -81,7 +81,7 @@
       "ingredients": "\n198 g de polpa de maracujá, sem as sementes (usar coador)\n180 ml de leite condensado\n6 ovos, batidos\n2 cups (470 ml) de natas\n1 tbsp (15 ml) de extrato de baunilha\n1/2 cup (120 ml) de água\n1 cup (240 ml) de açúcar",
       "instructions": " Misture o maracujá, o leite condensado, os ovos, as natas e a baunilha, bater até ficar homogêneo.\n Numa panela pequena, aqueça a água e o açúcar em lume médio-alto.\n Deixe ferver e cozinhe por quinze a vinte minutos, mexendo frequentemente, até que o caramelo fique com uma cor dourada escura.\n Colocar o caramelo na forma e colocar no frigorífico por quinze minutos.\n Pré-aqueça o forno a 180 C.\n Despeje a mistura de leite sobre o caramelo.\n Ir ao forno em banho maria cerca de 45 min ou até que o creme esteja firme no meia e levemente dourado \n Retire do forno e coloque no firgorífico para arrefecer durante pelo menos uma hora.\n Sirva frio.",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 8
     },
     {
@@ -109,7 +109,7 @@
       "ingredients": "220g esparguete\n50g pecorino\n4 gemas\n80g guanciale (bacon)\nSal e pimenta a gosto\nágua do Esparguete",
       "instructions": " Cozer o esparguete conforme instruçōes do pacote\n Cortar o bacon em pedaços pequenos e fritar\n Ralar o queijo e misturar com o sal, a pimenta, sal e as gemas até fazer ficar tudo bem envolvido\n Meter o recipiente com a past em banho Maria para o queijo poder derreter e colocar um pouco de água para a mistura ficar mais líquida\n Misturar a pasta com o esparguete e com o bacon e servir!",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 10
     },
     {

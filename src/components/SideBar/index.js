@@ -41,10 +41,10 @@ const SideBar = ({ className }) => {
           </div>
         </Link>
 
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+        <Link to={"/favorites"} style={{ textDecoration: "none" }}>
           <div className="grid-menu-two btn-add" onMouseEnter={()=> setFavorites('white')} onMouseLeave={()=> setFavorites('#64648C')}>
             <Like fill={favorites}/>
-            <button className="remove">Favorites</button>
+            <button className="remove">Favourites</button>
           </div>
         </Link>
         

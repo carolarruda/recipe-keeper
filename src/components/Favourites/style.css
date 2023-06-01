@@ -5,6 +5,11 @@
   background-color: rgba(240, 248, 255);
 }
 
+#main-container-favourite {
+  grid-template-rows: 60px 1fr;
+  gap: 20px;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, min-content));
@@ -73,6 +78,13 @@ padding-top: 5px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+.favourite-title {
+  font-size: 42px;
+border-bottom: 1px solid rgb(100, 100, 140);
+font-weight: 600;
+color: rgb(100, 100, 140);
 }
 
 @media (max-width: 768px) {

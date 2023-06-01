@@ -2,11 +2,10 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import Delete from "../icons/delete";
 import Edit from "../icons/edit";
-import Heart from "../icons/heart";
 import LikeRed from "../icons/likeRed";
 import { useState } from "react";
 
-const Main = ({
+const Favourites = ({
   className,
   recipes,
   setRecipes,
@@ -15,27 +14,10 @@ const Main = ({
   handleHoverOut,
   handleDelete,
 }) => {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(true);
 
   const likeRecipe = (id) => {
-    const likedRecipe = recipes.map((item) => {
-      if (item.id === id) {
-        return {
-          ...item,
-          liked: !item.liked,
-        };
-      } else {
-        return item;
-      }
-    });
 
-    setRecipes(likedRecipe);
-
-    const isRecipeLiked =
-      likedRecipe.find((item) => item.id === id)?.liked || false;
-    setIsLiked(isRecipeLiked);
-
-    if (isLiked) {
       const dislike = {
         liked: false,
       };
@@ -57,34 +39,12 @@ const Main = ({
               setIsLiked(false);
             });
         });
-    } else {
-      const LikedRecipe = {
-        liked: true,
-      };
-
-      const optLike = {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(LikedRecipe),
-      };
-      fetch(`http://localhost:4000/recipes/${id}`, optLike)
-        .then((response) => response.json())
-        .then(() => {
-          fetch("http://localhost:4000/recipes")
-            .then((response) => response.json())
-            .then((data) => {
-              setRecipes(data);
-              setIsLiked(true);
-            });
-        });
-    }
+  
   };
   return (
     <>
-      <div className={className}>
-        <div></div>
+      <div className={className} id="main-container-favourite">
+        <div className="favourite-title">My Favourites</div>
         <section className="card-grid">
           {recipes.length > 0 &&
             recipes.map((item, index) => {
@@ -96,15 +56,15 @@ const Main = ({
                   : "blur(1px) brightness(90%) grayscale(30%)",
                 // minHeight: isHovered ? "280px" : "275px",
                 // minWidth: isHovered ? "300px" : "295px",
-               
               };
               const cardBox = {
                 backgroundColor: isHovered ? "#c5e2e7" : "#d8dfe6",
                 // borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
                 transform: isHovered ? "translateY(-5px)" : "translateY(0px)",
-                transition: "background-color 0.3s, border-bottom 0.3s, transform 0.3s"
+                transition:
+                  "background-color 0.3s, border-bottom 0.3s, transform 0.3s",
               };
-              
+
               const show = {
                 fill: isHovered ? "#30505b" : "transparent",
                 padding: "3px",
@@ -125,8 +85,10 @@ const Main = ({
                 paddingLeft: "5px",
               };
 
-              return (
-                <div
+             
+                if(item.liked){
+                   return (
+                  <div
                   className="box"
                   style={cardBox}
                   onMouseEnter={() => handleHoverIn(index)}
@@ -147,8 +109,8 @@ const Main = ({
                       onClick={() => likeRecipe(item.id)}
                       className="btn-no-style"
                     >
-                      {!item.liked && <Heart show={show} />}
-                      {item.liked && <LikeRed showRed={showRed} />}
+
+                      <LikeRed showRed={showRed} />
                     </button>
                   </div>
 
@@ -157,7 +119,10 @@ const Main = ({
                   </Link>
                   <div className="recipe-name">{item.title}</div>
                 </div>
-              );
+                   );
+                }               
+               
+              ;
             })}
         </section>
       </div>
@@ -165,4 +130,4 @@ const Main = ({
   );
 };
 
-export default Main;
+export default Favourites;

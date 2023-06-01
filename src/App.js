@@ -1,6 +1,7 @@
 import "./App.css";
 import SideBar from "./components/SideBar";
 import Main from "./components/Main";
+import Favorites from "./components/Favourites";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NewRecipe from "./components/NewRecipe";
 import RecipeView from "./components/RecipeView";
@@ -72,10 +73,25 @@ function App() {
           }
         />
         <Route
+          path="/favorites"
+          element={
+            <Favorites
+              className="main-container"
+              recipes={recipes}
+              setRecipes={setRecipes}
+              hoveredCard={hoveredCard}
+              handleHoverIn={handleHoverIn}
+              handleHoverOut={handleHoverOut}
+              handleDelete={handleDelete}
+            />
+          }
+        />
+        <Route
           path="/add-new-recipe"
           element={<NewRecipe setRecipes={setRecipes} recipes={recipes} />}
         />
         <Route path="/:id" element={<RecipeView recipes={recipes} setRecipes={setRecipes} handleDelete={handleDelete} />} />
+        <Route path="favorites/:id" element={<RecipeView recipes={recipes} setRecipes={setRecipes} handleDelete={handleDelete} />} />
         <Route
           path="/recipes/edit/:id"
           element={<EditRecipe recipes={recipes} setRecipes={setRecipes} />}
