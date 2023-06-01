@@ -48,7 +48,6 @@ function App() {
     localStorage.setItem("THEME", JSON.stringify(theme));
   }, [theme]);
 
-
   const handleHoverIn = (index, isSecondCard) => {
     if (isSecondCard) {
       setHoveredCardTwo(index);
@@ -132,11 +131,43 @@ function App() {
       });
   };
 
+  const [search, setSearch] = useState("");
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:4000/recipes")
+      .then((res) => res.json())
+      .then((data) => {
+        setRecipes(data);
+        setFilteredRecipes(data);
+      });
+  }, []);
+
+
+
+  const handleSearch = (e) => {
+    const searchTerm = e.target.value;
+    setSearch(searchTerm);
+    if (searchTerm.length === 0) {
+      setFilteredRecipes(recipes);
+    } else {
+      const filteredRecipes = recipes.filter((recipe) => {
+        return recipe.title.toLowerCase().includes(searchTerm.toLowerCase());
+      });
+      setFilteredRecipes(filteredRecipes);
+    }
+  };
 
   return (
     <div className="grid">
-      <SideBar className="nav-container" theme={theme} />
+      <SideBar
+        className="nav-container"
+        theme={theme}
+        setRecipes={setRecipes}
+        recipes={recipes}
+        handleSearch={handleSearch}
+        search={search}
+      />
       <Routes>
         <Route
           path="/"
@@ -150,6 +181,7 @@ function App() {
               handleHoverOut={handleHoverOut}
               handleDelete={handleDelete}
               theme={theme}
+              filteredRecipes={filteredRecipes}
             />
           }
         />

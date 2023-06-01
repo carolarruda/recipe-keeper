@@ -5,6 +5,7 @@ import Clock from "../icons/clock";
 import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 import { Link } from "react-router-dom";
+import * as React from 'react';
 
 const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, theme }) => {
   const params = useParams();
@@ -38,11 +39,12 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
     <div className="grid-container">
       {recipes.map(
         (recipe, index) => {
+          if(recipe.id.toString() === `${params.id}`) {
 
-          return recipe.id.toString() === `${params.id}` && (
-            <>
+          return (
+            <React.Fragment key={`${recipe.id}`} >
               <section
-                key={recipes.id}
+                key={Math.random()} 
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
               >
@@ -50,15 +52,16 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
                   <button
                     onClick={() => handleDeleteRecipe(recipe.id)}
                     className="btn-no-style"
+                    key={Math.random()} 
                   >
                     <Delete fill={theme} />
                   </button>
-                  <Link to={`recipes/edit/${recipe.id}`} style={{margin: "10px"}}>
+                  <Link to={`recipes/edit/${recipe.id}`} style={{margin: "10px"}} key={Math.random()} >
                     <Edit fill={theme}/>
                   </Link>
                 </div>
               </section>
-              <section className="top" key={recipes.id}>
+              <section className="top">
                 <div className="title">{recipe.title}</div>
                 <div className="subtitle"></div>
                 <div className="right-side">
@@ -132,7 +135,7 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
                   </div>
                 </div>
               </section>
-              <section className="left" key={recipes.id}>
+              <section className="left">
                 <h1>Ingredients</h1>
                 <br />
                 <ul>
@@ -159,7 +162,7 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
                   )}
                 </ul>
               </section>
-              <section className="right" key={recipes.id}>
+              <section className="right" >
                 <h1>Instructions</h1>
                 <br />
                 <ol>
@@ -173,11 +176,11 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
                   )}
                 </ol>
               </section>
-              <section className="bottom" key={recipes.id}></section>
-            </>
+              <section className="bottom"></section>
+            </React.Fragment>
           )
         }
-          
+      } 
       )}
     </div>
   );

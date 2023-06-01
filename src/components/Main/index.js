@@ -14,7 +14,8 @@ const Main = ({
   handleHoverIn,
   handleHoverOut,
   handleDelete,
-  theme
+  theme,
+  filteredRecipes
 }) => {
   const [isLiked, setIsLiked] = useState(false);
 
@@ -88,7 +89,7 @@ const Main = ({
         <div></div>
         <section className="card-grid">
           {recipes.length > 0 &&
-            recipes.map((item, index) => {
+            filteredRecipes.map((item, index) => {
               const isHovered = hoveredCard === index;
               const boxstyle = {
                 backgroundImage: `url(${item.photo})`,
