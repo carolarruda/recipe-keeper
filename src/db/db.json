@@ -43,7 +43,7 @@
       "id": 5
     },
     {
-      "title": "Chocolate Quente",
+      "title": "Hot Cocoa",
       "photo": "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSGmIN_vH7aKNY6wNKjEhTGgYJ8oOL_w5MunbaDaul-L-ZgDbnChQGPvIWH2Qn9Rht1",
       "rating": "5",
       "course": "dessert",
@@ -139,34 +139,6 @@
       "notes": "",
       "liked": true,
       "id": 12
-    },
-    {
-      "title": "dd",
-      "photo": "",
-      "rating": "",
-      "course": "",
-      "prep": "",
-      "cook": "",
-      "servings": "",
-      "ingredients": "",
-      "instructions": "",
-      "notes": "",
-      "liked": false,
-      "id": 14
-    },
-    {
-      "title": "TEST",
-      "photo": "",
-      "rating": "",
-      "course": "",
-      "prep": "",
-      "cook": "",
-      "servings": "",
-      "ingredients": "",
-      "instructions": "",
-      "notes": "",
-      "liked": false,
-      "id": 15
     }
   ],
   "websites": [
