@@ -69,7 +69,7 @@ const RecipeView = ({ recipes, setRecipes, handleDelete, hoveredCard }) => {
                     ></link>
                     {(recipe.rating === "" || recipe.rating === "0") && (
                       <>
-                        <span classNameName="fa fa-star"></span>
+                        <span className="fa fa-star"></span>
                         <span className="fa fa-star"></span>
                         <span className="fa fa-star"></span>
                         <span className="fa fa-star"></span>

@@ -6,7 +6,7 @@
 }
 
 #main-container-favourite {
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 60px 1fr 60px 1fr;
   gap: 20px;
 }
 
@@ -84,7 +84,15 @@ padding-top: 5px;
   font-size: 42px;
 border-bottom: 1px solid rgb(100, 100, 140);
 font-weight: 600;
-color: rgb(100, 100, 140);
+display: grid;
+grid-template-columns: 1fr 150px;
+color: rgb(100, 100, 140);;
+}
+
+.add-btn-website {
+  font-size: 15px;
+  /* align-self: center; */
+  color: rgb(101, 100, 100);
 }
 
 @media (max-width: 768px) {

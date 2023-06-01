@@ -1,8 +1,8 @@
-const Plus = ({fill}) => {
+const Plus = ({fill, width}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={"20px"}
+      width={width}
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"

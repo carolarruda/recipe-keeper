@@ -29,7 +29,7 @@ const SideBar = ({ className }) => {
       <div className="grid-menu">
         <Link to={"add-new-recipe"} style={{ textDecoration: "none" }}>
           <div className="grid-menu-two btn-add" onMouseEnter={()=> setAdd('white')} onMouseLeave={()=> setAdd('#64648C')} >
-            <Plus fill={add} />
+            <Plus fill={add} width={"20px"}/>
             <button className="remove">Add new recipes</button>
           </div>
         </Link>
@@ -41,7 +41,7 @@ const SideBar = ({ className }) => {
           </div>
         </Link>
 
-        <Link to={"/favorites"} style={{ textDecoration: "none" }}>
+        <Link to={"/favourites"} style={{ textDecoration: "none" }}>
           <div className="grid-menu-two btn-add" onMouseEnter={()=> setFavorites('white')} onMouseLeave={()=> setFavorites('#64648C')}>
             <Like fill={favorites}/>
             <button className="remove">Favourites</button>
