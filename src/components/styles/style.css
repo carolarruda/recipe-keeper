@@ -109,6 +109,7 @@ padding-top: 12px;
   grid-template-rows: 20px 1fr;
   padding-left: 20px;
   background-color: rgba(240, 248, 255);
+  
 }
 
 #main-container-favourite {
@@ -237,8 +238,8 @@ color: rgb(100, 100, 140);;
 }
 
 .color1 {
-  background-color: rgb(210, 172, 255);
-  border: 1px solid rgb(157, 130, 190);
+  background-color: rgb(247, 154, 192);
+  border: 1px solid  rgb(211, 132, 165);
   border-radius: 5px;
 }
 
@@ -422,30 +423,38 @@ h1 {
 
 
 .nav-container {
-    /* padding-top: 40px; */
-    background-color: rgb(197, 226, 231);
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 50px 50px 50px;
-
+  background-color: rgb(197, 226, 231);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+  position: relative;
 }
+
+.nav-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.nav-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  z-index: -1;
+}
+
 
 
 /* themes */
-
-#lavender {
-  background-color: rgb(233, 194, 237);
-}
-
-#blue {
-  background-color: rgb(158, 175, 245);
-
-  color: white;
-}
-
-#orange {
-  background-color: rgba(247, 179, 21, 0.916);
-}
 
 
 .options-icon {
@@ -472,6 +481,7 @@ h1 {
   .grid-menu-two {
     grid-template-columns: 30px 1fr ;
     column-gap: 5px;
+    transition: background-color 0.3s;
   }
 
   .remove {
@@ -506,8 +516,8 @@ h1 {
     }
     
     .btn-add:hover {
-      border-left: 4px solid rgb(227, 87, 79);
-      background-color:rgb(136, 136, 190);
+      border-left: 4px solid rgba(240, 235, 235, 0.8);
+      background-color: rgba(0, 0, 0, 0.1);
       cursor: pointer;
  
     }
@@ -582,7 +592,7 @@ color: rgb(114, 114, 143);
 
 @media (max-width: 550px) {
   .card-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #phone-view {
@@ -624,4 +634,34 @@ color: rgb(114, 114, 143);
     grid-template-rows: 30px 1fr 30px 1fr;
     gap: 30px;
   }
+
+  .box {
+    min-width: 150px;
+    max-width: 150px;
+    height: 150px;
+    color: rgb(17, 12, 12);
+    font-size: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 35px 1fr 35px;
+
+  }
+
+  .recipe-photo {
+    min-width: 90px;
+    max-width: 90px;
+    height: 90px;
+
+    display: grid;
+    place-self: center;
+    border-radius: 50%;
+    background-size: cover;
+    background-color: rgba(197, 226, 231, 0.816);   /* //this will need change  */
+  
+  }
+
+  .recipe-name {
+    display: none;
+  }
+  
 }

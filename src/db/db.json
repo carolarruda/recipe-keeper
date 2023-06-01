@@ -46,14 +46,14 @@
       "title": "Hot Cocoa",
       "photo": "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSGmIN_vH7aKNY6wNKjEhTGgYJ8oOL_w5MunbaDaul-L-ZgDbnChQGPvIWH2Qn9Rht1",
       "rating": "5",
-      "course": "dessert",
+      "course": "entree",
       "prep": "00:05",
       "cook": "00:05",
       "servings": "4",
       "ingredients": "2 cup leite (gordo)\n30 ml cacau em pó\n30 ml açúcar \n¼ cup de pedaços de chocolate\n0,6 ml tsp extracto de baunilha\n",
       "instructions": "Coloque o leite, o cacau em pó e o açúcar numa panela pequena. Aqueça em lume médio/médio-baixo, mexendo sempre, até aquecer (mas sem ferver). Adicione as gotas de chocolate e bata constantemente até que o chocolate derreta. Adicione o extrato de baunilha, sirva imediatamente.",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 6
     },
     {
@@ -81,7 +81,7 @@
       "ingredients": "\n198 g de polpa de maracujá, sem as sementes (usar coador)\n180 ml de leite condensado\n6 ovos, batidos\n2 cups (470 ml) de natas\n1 tbsp (15 ml) de extrato de baunilha\n1/2 cup (120 ml) de água\n1 cup (240 ml) de açúcar",
       "instructions": " Misture o maracujá, o leite condensado, os ovos, as natas e a baunilha, bater até ficar homogêneo.\n Numa panela pequena, aqueça a água e o açúcar em lume médio-alto.\n Deixe ferver e cozinhe por quinze a vinte minutos, mexendo frequentemente, até que o caramelo fique com uma cor dourada escura.\n Colocar o caramelo na forma e colocar no frigorífico por quinze minutos.\n Pré-aqueça o forno a 180 C.\n Despeje a mistura de leite sobre o caramelo.\n Ir ao forno em banho maria cerca de 45 min ou até que o creme esteja firme no meia e levemente dourado \n Retire do forno e coloque no firgorífico para arrefecer durante pelo menos uma hora.\n Sirva frio.",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 8
     },
     {
