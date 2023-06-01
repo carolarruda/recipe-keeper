@@ -17,7 +17,8 @@ const Favourites = ({
   handleDelete,
   websites,
   setWebsites,
-  theme
+  theme,
+  search
 }) => {
 
   const [isLiked, setIsLiked] = useState(true);
@@ -76,13 +77,20 @@ const handleDeleteWeb = (id) => {
         });
     });
 }
+
+
+const filteredRecipes = recipes.filter((recipe) => {
+  return recipe.title.toLowerCase().includes(search.toLowerCase());
+});
+
+
   return (
     <>
       <div className={className} id="main-container-favourite">
         <div className="favourite-title">FAVOURITE RECIPES</div>
         <section className="card-grid">
-          {recipes.length > 0 &&
-            recipes.map((item, id) => {
+          {filteredRecipes.length > 0 &&
+            filteredRecipes.map((item, id) => {
               const isHovered = hoveredCard === id;
       
               const boxstyle = {

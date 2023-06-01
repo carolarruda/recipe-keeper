@@ -201,6 +201,7 @@ function App() {
               setWebsites={setWebsites}
               websites={websites}
               theme={theme}
+              search={search}
             />
           }
         />

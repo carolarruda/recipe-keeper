@@ -85,7 +85,7 @@ const Main = ({
     }
   };
 
-  // Derive filteredRecipes based on recipes and search state
+
   const filteredRecipes = recipes.filter((recipe) => {
     return recipe.title.toLowerCase().includes(search.toLowerCase());
   });
