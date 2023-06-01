@@ -356,7 +356,6 @@ color: rgb(100, 100, 140);;
 
 .right-side {
   grid-area: right-side;
-  background-color: rgb(97, 184, 184);
   display: grid;
   grid-template:
     "rating rating" 1fr
@@ -613,13 +612,10 @@ color: rgb(114, 114, 143);
   font-size: 20px;
 }
 
-
-
-
-
-
-
 }
+
+
+
 
 
 
