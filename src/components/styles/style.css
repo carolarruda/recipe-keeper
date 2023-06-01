@@ -1,0 +1,558 @@
+/* Form and Edit recipe and website*/
+
+.form-container {
+  display: grid;
+  place-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* form itselff */
+.big-container {
+  justify-content: left;
+  border: solid 1px transparent;
+  background-color:rgb(240, 248, 255);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding: 20px;
+}
+
+/* form items */
+
+.form-stack.recipe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.segment {
+  display: grid;
+  row-gap: 10px;
+}
+
+.recipe-form label {
+  font-weight: 600;
+  font-size: 11px;
+  color: black;
+}
+
+.rating label {
+  float: right;
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+  justify-content: center; 
+  align-items: center; 
+  padding-top: 8px;
+}
+
+.rating label:not(:first-of-type) {
+  padding-right: 2px;
+
+}
+.rating label:before {
+  content: "\2605";
+  font-size: 20px;
+  color: #c1c1c1;
+  line-height: 1;
+  align-items: center;
+
+}
+.rating input {
+  display: none;
+}
+.rating input:checked ~ label:before,
+.rating:not(:checked) > label:hover:before,
+.rating:not(:checked) > label:hover ~ label:before {
+  color: rgb(254,217,9);
+}
+
+.inline {
+display: grid;
+grid-template-columns: 0.5fr 1fr;
+align-items: center;
+}
+
+.segment, .inline {
+padding-top: 12px;
+}
+
+.second-column, .third-column, .fourth-column {
+  display: grid;
+  grid-template-rows: 12px 1fr;
+}
+
+.courses {
+  font-size: 10px;
+}
+
+.fifth-column input {
+  height: 25px;
+
+
+}
+.fifth-column {
+
+  padding-top: 35px;
+  display: grid;
+  grid-template-rows: 30px 30px;
+ }
+
+ 
+ /* no repeats until here */
+
+ /* Favoutites styling and Main */
+
+ .main-container {
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  padding-left: 20px;
+  background-color: rgba(240, 248, 255);
+}
+
+#main-container-favourite {
+  grid-template-rows: 60px 1fr 60px 1fr;
+  gap: 20px;
+}
+
+#main-container-settings {
+  grid-template-rows: 60px 60px;
+  gap: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, min-content));
+  grid-gap: 20px;
+  align-content: start;
+}
+
+.box {
+    min-width: 330px;
+    max-width: 330px;
+    height: 355px;
+    color: rgb(17, 12, 12);
+    font-size: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 35px 1fr 35px;
+
+  }
+
+  .box:hover .recipe-name {
+    color: rgb(100, 99, 99);
+  }
+
+  .recipe-name {
+    color: rgb(128, 128, 128);
+    display: grid;
+    text-align: center;
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+
+
+
+  .icons-container {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+
+  .box > div {
+padding-top: 5px;
+
+  }
+
+.recipe-photo {
+  min-width: 285px;
+  max-width: 285px;
+  height: 265px;
+  font-size: 20px;
+  display: grid;
+  place-self: center;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: rgba(197, 226, 231, 0.816);   /* //this will need change  */
+
+}
+
+.btn-no-style {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.favourite-title {
+  font-size: 38px;
+border-bottom: 1px solid rgb(100, 100, 140);
+font-weight: 600;
+display: grid;
+grid-template-columns: 1fr 150px;
+color: rgb(100, 100, 140);;
+}
+
+.settings-title {
+  font-size: 38px;
+  border-bottom: 1px solid rgb(100, 100, 140);
+font-weight: 600;
+display: grid;
+grid-template-columns: 1fr 150px;
+color: rgb(100, 100, 140);;
+}
+
+.add-btn-website {
+  font-size: 15px;
+  color: rgb(101, 100, 100);
+}
+
+#remove-border-radius{
+  border-radius: 15%;
+}
+
+/* settings */
+
+
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr ;
+  font-size: 16px;
+  align-items: center;
+
+}
+
+.colors button {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.lavender {
+  background-color: rgb(210, 172, 255);
+  border: 1px solid rgb(157, 130, 190);
+  border-radius: 5px;
+}
+
+.orange {
+  background-color: 	rgb(235, 150, 5);
+  border: 1px solid rgb(235, 150, 5);
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: 	rgb(50, 92, 253);
+  border: 1px solid rgb(41, 74, 205);
+  border-radius: 5px;
+}
+
+.default {
+  background-color: 	rgb(197, 226, 231);
+  border: 1px solid rgb(162, 186, 190);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* recipe View */
+.grid-container {
+  display: grid;
+  grid-template:
+    "content content" 200px
+    "top top" 0.1fr
+    "left right" 2fr
+    "bottom bottom" 0.5fr/
+    1fr 2fr;
+}
+
+.content {
+  grid-area: content;
+  background-size: cover;
+  background-position: 0px;
+  filter: grayscale(20%);
+}
+
+.top {
+
+    grid-area: top;
+    display: grid;
+    position: relative;
+    grid-template:
+      "title right-side" 1fr
+      "subtitle right-side" 0.5fr/
+      2fr 1fr;
+  }
+  
+  .top::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(10%);
+    width: calc(80%);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  
+
+
+.left {
+  background-color: rgb(240, 248, 255);
+  grid-area: left;
+  padding-top: 20px;
+}
+
+.right {
+  background-color: rgb(240, 248, 255);
+  grid-area: right;
+  padding-top: 20px;
+
+}
+
+.right::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* bottom: calc(20%);
+    height: calc(50%);
+    border-left: 1px solid rgb(0, 0, 0); */
+  }
+
+
+
+.bottom {
+  background-color: rgb(197, 221, 221);
+  grid-area: bottom;
+  background-size: cover;
+  background-position: 0px;
+  background-image: url("https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  filter: blur(0.8px);
+  filter: grayscale(20%);
+}
+
+.title {
+  display: grid;
+  grid-area: title;
+  background-color: rgb(240, 248, 255);
+  padding-left: 90px;
+  padding-top: 40px;
+  font-weight: 600;
+  font-size: 2.3rem;
+  color: rgb(35, 31, 28);
+  align-content: center;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  background-color: rgb(240, 248, 255);
+}
+
+.right-side {
+  grid-area: right-side;
+  background-color: rgb(97, 184, 184);
+  display: grid;
+  grid-template:
+    "rating rating" 1fr
+    "servings time" 1fr/
+    1fr 1fr;
+}
+
+.score {
+  grid-area: rating;
+  background-color: rgb(240, 248, 255);
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  align-content: center;
+  justify-content: right;
+  padding-right: 10px;
+}
+.servings {
+  grid-area: servings;
+}
+
+.time {
+  grid-area: time;
+}
+
+.servings, .time {
+    background-color:  rgb(240, 248, 255);
+    display: grid;
+    grid-template-columns: 50px 50px;
+    align-content: center;
+}
+
+.checked {
+  color: orange;
+}
+
+.number {
+    font-size: 22px;
+
+}
+
+.ingredients {
+    font-size: 16px;
+    margin: 10px;
+}
+
+h1 {
+    margin: 10px;
+    display: grid;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.notes {
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+
+/* Side bar */
+
+
+.nav-container {
+    /* padding-top: 40px; */
+    background-color: rgb(197, 226, 231);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+
+}
+
+.options-icon {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.form-style > input {
+    text-align: left;
+    width: 170px;
+    height: 20px;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    margin-left: 10px;
+    font-size: 10px;
+
+  }
+
+  .grid-menu {
+    display: grid;
+
+  }
+
+  .grid-menu-two {
+    grid-template-columns: 30px 1fr ;
+    column-gap: 5px;
+  }
+
+  .remove {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(114, 114, 143);
+    font-weight: 600;
+  }
+
+  .remove:hover {
+    color: wheat
+  }
+
+
+.btn-add {
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(33, 33, 33);
+    border-left: 4px solid transparent;
+    height: 45px;
+    padding-left: 10px;
+    transition: background-color 0.3s, border-left 0.3s, transform 0.3s;
+ 
+
+    }
+    
+    .btn-add:hover {
+      border-left: 4px solid rgb(62, 128, 146);
+      background-color: rgb(158, 205, 212);
+      cursor: pointer;
+ 
+    }
+    .btn-add:hover .remove {
+      color: rgb(62, 128, 146);
+      color: white;
+      font-weight: 600;
+      
+    }
+
+    
+    .btn-add:active {
+      box-shadow: inset 0px 3px 7px transparent;
+      transform: translateY(2px);
+    }
+
+    .end-page {
+        display: grid;
+        align-self: end;
+        margin-bottom: 60px;
+
+    }
+
+#search-online {
+  background: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #64648c;
+  font-size: 10px;
+color: rgb(114, 114, 143);
+  border-radius: 0;
+  transition: border-color 0.3s ease;
+  font-weight: 600;
+  transition: font-size 0.3s;
+}
+
+#search-online:hover {
+  border-color: #64648c;
+
+}
+
+#search-online:focus {
+  border-color: #4b4b67;
+  font-size: 12px;
+}
+
+
+
+
+

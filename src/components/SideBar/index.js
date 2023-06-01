@@ -1,4 +1,4 @@
-import "./style.css";
+import "../styles/style.css";
 import Options from "../icons/options";
 import Plus from "../icons/plus";
 import HomeIcon from "../icons/homeIcon";

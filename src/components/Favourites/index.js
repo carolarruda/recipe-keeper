@@ -1,4 +1,4 @@
-import "./style.css";
+import "../styles/style.css";
 import { Link } from "react-router-dom";
 import Delete from "../icons/delete";
 import Edit from "../icons/edit";
