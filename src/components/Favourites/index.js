@@ -21,7 +21,13 @@ const Favourites = ({
 
   const [isLiked, setIsLiked] = useState(true);
 
-
+  useEffect(() => {
+    fetch("http://localhost:4000/websites")
+      .then((response) => response.json())
+      .then((data) => {
+        setWebsites(data);
+      });
+  }, []);
 
   const likeRecipe = (id) => {
     const dislike = {
@@ -46,6 +52,29 @@ const Favourites = ({
           });
       });
   };
+  
+const handleDeleteWeb = (id) => {
+  const filteredWebsites = websites.find((website) => {
+    if (website.id !== id) {
+      return website;
+    }
+  });
+  setWebsites(filteredWebsites);
+
+  const opts = {
+    method: "DELETE",
+  };
+  fetch(`http://localhost:4000/websites/${id}`, opts)
+    .then((response) => response.json())
+    .then(() => {
+      fetch("http://localhost:4000/websites")
+        .then((res) => res.json())
+        .then((data) => {
+          setWebsites(data);
+         
+        });
+    });
+}
   return (
     <>
       <div className={className} id="main-container-favourite">
@@ -137,11 +166,11 @@ const Favourites = ({
         </div>
         <section className="card-grid">
         {websites.length > 0 &&
-            websites.map((item, index) => {
+            websites.map((website, index) => {
              
               const isHoveredTwo = hoveredCardTwo === index;
               const boxstyle = {
-                backgroundImage: `url(${item.image})`,
+                backgroundImage: `url(${website.image})`,
                 filter: isHoveredTwo
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
@@ -178,29 +207,29 @@ const Favourites = ({
                   style={cardBox}
                   onMouseEnter={() => handleHoverIn(index, true)} 
                   onMouseLeave={() => handleHoverOut(true)} 
-                  key={item.id}
+                  key={website.id}
                   >
                     <div className="icons-container">
                       <button
-                        onClick={() => handleDelete(item.id)}
+                        onClick={() => handleDeleteWeb(website.id)}
                         className="btn-no-style"
                       >
                         <Delete show={show} />
                       </button>
-                      <Link to={`recipes/edit/${item.id}`}>
+                      <Link to={`recipes/edit/${website.id}`}>
                         <Edit show={show} />
                       </Link>
                       <button
-                        onClick={() => likeRecipe(item.id)}
+                        onClick={() => likeRecipe(website.id)}
                         className="btn-no-style"
                       >
                       </button>
                     </div>
 
-                    <Link to={`${item.url}`} style={styleForphoto}>
+                    <Link to={`${website.url}`} style={styleForphoto}>
                       <div className="recipe-photo" style={boxstyle}></div>
                     </Link>
-                    <div className="recipe-name">{item.name}</div>
+                    <div className="recipe-name">{website.name}</div>
                   </div>
                 );
               

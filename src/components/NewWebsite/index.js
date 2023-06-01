@@ -45,7 +45,7 @@ const NewWebsite = ({ websites, setWebsites }) => {
         setImage("")
         setUrl("")
         setWebsites(websites);
-        fetch("http://localhost:4000/recipes")
+        fetch("http://localhost:4000/websites")
           .then((response) => response.json())
           .then((data) => setWebsites(data));
       });

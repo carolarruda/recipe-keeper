@@ -73,7 +73,7 @@
     {
       "title": "Pudim de Maracujá",
       "photo": "https://www.unileverfoodsolutions.co.za/dam/global-ufs/mcos/SOUTH-AFRICA/calcmenu/recipes/ZA-recipes/general/passion-fruit-and-lemon-cr%C3%A8me-brulee/main-header.jpg",
-      "rating": "4",
+      "rating": "5",
       "course": "dessert",
       "prep": "00:30",
       "cook": "04:00",
@@ -147,24 +147,6 @@
       "image": "https://www.pickuplimes.com/static/images/index_headers/recipe-index-header-compressed.7078caf7b9aa.jpeg",
       "url": "https://www.pickuplimes.com/",
       "id": 1
-    },
-    {
-      "name": "TEST 3",
-      "image": "https://www.pickuplimes.com/static/images/logo/pul_logo_main_flat_987_247.9cf5ed7b1374.png",
-      "url": "",
-      "id": 2
-    },
-    {
-      "name": "Test 5",
-      "image": "https://www.pickuplimes.com/static/images/logo/pul_logo_main_flat_987_247.9cf5ed7b1374.png",
-      "url": "",
-      "id": 3
-    },
-    {
-      "name": "NEW",
-      "image": "",
-      "url": "",
-      "id": 4
     }
   ]
 }

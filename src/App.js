@@ -30,6 +30,8 @@ function App() {
       });
   }, []);
 
+
+
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
 
@@ -67,10 +69,34 @@ function App() {
           .then((res) => res.json())
           .then((data) => {
             setRecipes(data);
-            navigate("/");
           });
       });
   };
+
+  const handleDeleteWeb = (id) => {
+    const filteredWebsites = websites.find((website) => {
+      if (website.id !== id) {
+        return website;
+      }
+    });
+    setWebsites(filteredWebsites);
+  
+    const opts = {
+      method: "DELETE",
+    };
+    fetch(`http://localhost:4000/websites/${id}`, opts)
+      .then((response) => response.json())
+      .then(() => {
+        fetch("http://localhost:4000/websites")
+          .then((res) => res.json())
+          .then((data) => {
+            setWebsites(data);
+           
+          });
+      });
+  }
+
+
 
   return (
     <div className="grid">
@@ -132,6 +158,7 @@ function App() {
               recipes={recipes}
               setRecipes={setRecipes}
               handleDelete={handleDelete}
+              handleDeleteWeb={handleDeleteWeb}
 
             />
           }
