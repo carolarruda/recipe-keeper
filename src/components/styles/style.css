@@ -236,25 +236,25 @@ color: rgb(100, 100, 140);;
   margin: 5px;
 }
 
-.lavender {
+.color1 {
   background-color: rgb(210, 172, 255);
   border: 1px solid rgb(157, 130, 190);
   border-radius: 5px;
 }
 
-.orange {
+.color2 {
   background-color: 	rgb(235, 150, 5);
   border: 1px solid rgb(235, 150, 5);
   border-radius: 5px;
 }
 
-.blue {
+.color3 {
   background-color: 	rgb(50, 92, 253);
   border: 1px solid rgb(41, 74, 205);
   border-radius: 5px;
 }
 
-.default {
+.color4 {
   background-color: 	rgb(197, 226, 231);
   border: 1px solid rgb(162, 186, 190);
   border-radius: 5px;
@@ -440,6 +440,25 @@ h1 {
     grid-template-rows: 50px 50px 50px;
 
 }
+
+
+/* themes */
+
+#lavender {
+  background-color: rgb(233, 194, 237);
+}
+
+#blue {
+  background-color: rgb(158, 175, 245);
+  background-color: rgb(155, 169, 237);
+  color: white;
+}
+
+#orange {
+  background-color: rgb(255, 179, 5);
+
+}
+
 
 .options-icon {
   margin-left: 10px;

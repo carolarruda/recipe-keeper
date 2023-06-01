@@ -8,7 +8,7 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-const SideBar = ({ className }) => {
+const SideBar = ({ className, theme }) => {
   const [setings, setSettings] = useState ('#64648C')
   const [home, setHome] = useState ('#64648C')
   const [favorites, setFavorites] = useState ('#64648C')
@@ -17,7 +17,7 @@ const SideBar = ({ className }) => {
 
 
   return (
-    <div className={className}>
+    <div className={className} id={theme}>
       <button className="options-icon remove">
       <Options />
       </button>
