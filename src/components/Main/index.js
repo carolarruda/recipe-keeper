@@ -15,9 +15,10 @@ const Main = ({
   handleHoverOut,
   handleDelete,
   theme,
-  filteredRecipes
+  search
 }) => {
   const [isLiked, setIsLiked] = useState(false);
+
 
   const likeRecipe = (id) => {
     const likedRecipe = recipes.map((item) => {
@@ -83,12 +84,18 @@ const Main = ({
         });
     }
   };
+
+  // Derive filteredRecipes based on recipes and search state
+  const filteredRecipes = recipes.filter((recipe) => {
+    return recipe.title.toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <>
       <div className={className}>
         <div></div>
         <section className="card-grid">
-          {recipes.length > 0 &&
+          {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, index) => {
               const isHovered = hoveredCard === index;
               const boxstyle = {
@@ -96,16 +103,14 @@ const Main = ({
                 filter: isHovered
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
-                // minHeight: isHovered ? "280px" : "275px",
-                // minWidth: isHovered ? "300px" : "295px",
-               
               };
               const cardBox = {
-                backgroundColor: isHovered ? `${theme}` : "#d8dfe6",                // borderBottom: isHovered ? "3px solid #9ecdd4" : "3px solid transparent",
+                backgroundColor: isHovered ? `${theme}` : "#d8dfe6",
                 transform: isHovered ? "translateY(-5px)" : "translateY(0px)",
-                transition: "background-color 0.3s, border-bottom 0.3s, transform 0.3s"
+                transition:
+                  "background-color 0.3s, border-bottom 0.3s, transform 0.3s",
               };
-              
+
               const show = {
                 fill: isHovered ? "#30505b" : "transparent",
                 padding: "3px",

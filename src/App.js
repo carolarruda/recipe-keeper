@@ -182,6 +182,7 @@ function App() {
               handleDelete={handleDelete}
               theme={theme}
               filteredRecipes={filteredRecipes}
+              search={search}
             />
           }
         />
