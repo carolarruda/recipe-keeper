@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import EditRecipe from "./components/EditRecipe";
 import NewWebsite from "./components/NewWebsite";
 import EditWebsite from "./components/EditWebsite";
+import Settings from "./components/Settings";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -203,6 +204,10 @@ function App() {
         <Route
           path="/favourites/websites/edit/:id"
           element={<EditWebsite websites={websites} setWebsites={setWebsites} />}
+        />
+        <Route
+          path="/settings"
+          element={<Settings   className="main-container"/>}
         />
       </Routes>
     </div>

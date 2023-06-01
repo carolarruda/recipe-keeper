@@ -48,7 +48,7 @@ const SideBar = ({ className }) => {
           </div>
         </Link>
         
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+        <Link to={"/settings"} style={{ textDecoration: "none" }}>
           <div className="grid-menu-two btn-add" onMouseEnter={()=> setSettings('white')} onMouseLeave={()=> setSettings('#64648C')} >
           <Settings fill={setings} />
             <button className="remove">Settings</button>

@@ -78,7 +78,7 @@ const handleDeleteWeb = (id) => {
   return (
     <>
       <div className={className} id="main-container-favourite">
-        <div className="favourite-title">My Favourites</div>
+        <div className="favourite-title">FAVOURITE RECIPES</div>
         <section className="card-grid">
           {recipes.length > 0 &&
             recipes.map((item, id) => {
@@ -156,7 +156,7 @@ const handleDeleteWeb = (id) => {
             })}
         </section>
         <div className="favourite-title">
-          Favourite Websites
+          FAVOURITE WEBSITES
           <Link to={"/add-new-website"}>
 
             <button className="btn-no-style add-btn-website">

@@ -12,7 +12,7 @@
       "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
       "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
       "id": 2,
-      "liked": true
+      "liked": false
     },
     {
       "title": "Strogonoff de grão",
@@ -25,7 +25,7 @@
       "ingredients": "\n\n1 cup de grão de bico cozido\n1 nata de soja\n1 cebola\n6 dentes de alho picados\nSementes de mostarda\n1 cup de cogumelos Paris\n2 cup de polpa de tomate\n½ cup de água\nCebolinho a gosto\n1 Tbsp de sal",
       "instructions": "Modo de preparação dos cogumelos\nLave os cogumelos e corte em fatias finas;\nLeve ao fogo em uma frigideira pré-aquecida por 5 minutos, até que o cogumelo solte a água;\nEscorra e reserve.\nModo de preparação do strogonoff\n Numa panela grande pré aquecida, coloque o azeite e as sementes de mostarda.\n Frite até que elas comecem a dourar, ou até que comecem a \"saltar\".\n Adicione o alho e a cebola e refogue por 3 minutos.\n Acrescente o grão de bico e os cogumelos, deixando em lume baixo por aproximadamente 5 minutos.\n Acrescente a polpa de tomate e a água.\n Adicione o sal e deixe cozinhar 10 minutos em lume baixo.\n Desligue e acrescente a nata de soja e o cebolinho.\n",
       "notes": "Sirva com arroz branco\n\nWebsite: https://www.tudogostoso.com.br/receita/188417-strogonoff-vegano-de-grao-de-bico-e-palmito.html",
-      "liked": true,
+      "liked": false,
       "id": 4
     },
     {
@@ -39,7 +39,7 @@
       "ingredients": "Seasoned tofu\n2 Tbsp(30 mL) azeite\n650 g tofu (cortado em cubos) \n2 Tbsp (30 ml) ketjap manis\n\nStir fry\n1 Tbsp (15 ml) óleo de sésamo\n6 chalotas médias picadas\n10 dentes de alho picado \n2 bróculos \n370 g ramen noodles\n2 pimentão vermelho picado\n2 cups (298 g) tomate-cereja\n4 Tbsp (60 ml) molho de soja dark\n4 Tbsp (60 mL) sambal oelek, ",
       "instructions": "Numa panela grande em lume alto, adicione o azeite. Quando estiver quente, adicione o tofu. Mexa a cada poucos minutos, com cuidado para  o tofu não se desfazer. Quando estiver levemente dourado em todos os lados, adicione o ketjap, misture bem e retire do lume.\nNuma frigideira ou wok em lume médio-alto, adicione o óleo de sésamo, as chalotas, o alho e os bróculos e cozinhe por 6 minutos.\n Cozinhe a massa de acordo com as instruções da embalagem. O ideal é escorrer quando o macarrão estiver a 2 minutos de ficar al dente*. Passe o macarrão em água fria.\n Adicione o macarrão escorrido à panela com o brócolis. Adicione também o tofu, pimentão, tomate, molho de soja e sambal. Misture bem e aqueça até que o macarrão esteja totalmente cozido.\nDecore com sementes de sésamo e sirva!",
       "notes": "Sirva com cebolinho a gosto \n\n",
-      "liked": true,
+      "liked": false,
       "id": 5
     },
     {
@@ -81,7 +81,7 @@
       "ingredients": "\n198 g de polpa de maracujá, sem as sementes (usar coador)\n180 ml de leite condensado\n6 ovos, batidos\n2 cups (470 ml) de natas\n1 tbsp (15 ml) de extrato de baunilha\n1/2 cup (120 ml) de água\n1 cup (240 ml) de açúcar",
       "instructions": " Misture o maracujá, o leite condensado, os ovos, as natas e a baunilha, bater até ficar homogêneo.\n Numa panela pequena, aqueça a água e o açúcar em lume médio-alto.\n Deixe ferver e cozinhe por quinze a vinte minutos, mexendo frequentemente, até que o caramelo fique com uma cor dourada escura.\n Colocar o caramelo na forma e colocar no frigorífico por quinze minutos.\n Pré-aqueça o forno a 180 C.\n Despeje a mistura de leite sobre o caramelo.\n Ir ao forno em banho maria cerca de 45 min ou até que o creme esteja firme no meia e levemente dourado \n Retire do forno e coloque no firgorífico para arrefecer durante pelo menos uma hora.\n Sirva frio.",
       "notes": "",
-      "liked": false,
+      "liked": true,
       "id": 8
     },
     {
@@ -137,7 +137,7 @@
       "ingredients": "397 g de leite condensado\n476 ml de natas\n250g de oreos",
       "instructions": " Começar por cortar as bolachas oreo em pedaços;\n De seguida misturar as natas com o leite condensado e bater com uma batedeira de mão até ficar com uma textura cremosa;\n Adicionar 3/4 das bolachas e colocar a mistura numa forma. Decorar com restantes bolachas e levar ao congelador durante 6 horas.",
       "notes": "",
-      "liked": false,
+      "liked": true,
       "id": 12
     }
   ],
@@ -153,12 +153,6 @@
       "image": "https://download.cnet.com/a/img/resize/bfa8575e8a3c61066e2b9dc8264082abff09f767/catalog/2020/05/11/b84ef40b-b6e3-4b63-aaf2-aa0283d709af/imgingest-8676716563213811209.png?auto=webp&fit=crop&width=64",
       "url": "https://cookieandkate.com/",
       "id": 3
-    },
-    {
-      "name": "ssss",
-      "image": "",
-      "url": "",
-      "id": 4
     }
   ]
 }

@@ -5,8 +5,8 @@
   background-color: rgba(240, 248, 255);
 }
 
-#main-container-favourite {
-  grid-template-rows: 60px 1fr 60px 1fr;
+#main-container-settings {
+  grid-template-rows: 60px 60px;
   gap: 20px;
 }
 
@@ -80,9 +80,9 @@ padding-top: 5px;
 	outline: inherit;
 }
 
-.favourite-title {
+.settings-title {
   font-size: 38px;
-border-bottom: 1px solid rgb(100, 100, 140);
+  border-bottom: 1px solid rgb(100, 100, 140);
 font-weight: 600;
 display: grid;
 grid-template-columns: 1fr 150px;
@@ -97,6 +97,48 @@ color: rgb(100, 100, 140);;
 
 #remove-border-radius{
   border-radius: 15%;
+}
+
+.theme {
+
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr ;
+  font-size: 16px;
+  align-items: center;
+
+}
+
+.colors button {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.lavender {
+  background-color: rgb(210, 172, 255);
+  border: 1px solid rgb(157, 130, 190);
+  border-radius: 5px;
+}
+
+.orange {
+  background-color: 	rgb(235, 150, 5);
+  border: 1px solid rgb(235, 150, 5);
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: 	rgb(50, 92, 253);
+  border: 1px solid rgb(41, 74, 205);
+  border-radius: 5px;
+}
+
+.default {
+  background-color: 	rgb(197, 226, 231);
+  border: 1px solid rgb(162, 186, 190);
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
