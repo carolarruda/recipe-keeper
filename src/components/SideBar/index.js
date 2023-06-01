@@ -20,7 +20,7 @@ const SideBar = ({ className, theme, setRecipes, recipes, search, handleSearch }
 
 
   return (
-    <div className={className} style={{ backgroundColor: theme }}>
+    <div className={className} style={{ backgroundColor: theme }} id="phone-view">
       <button className="options-icon remove">
         <Options />
       </button>
