@@ -612,6 +612,11 @@ color: rgb(114, 114, 143);
   font-size: 20px;
 }
 
+#main-container-favourite {
+  grid-template-rows: 30px 1fr 30px 1fr;
+  gap: 30px;
+}
+
 }
 
 
