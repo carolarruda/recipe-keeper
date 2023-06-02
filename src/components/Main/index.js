@@ -17,12 +17,8 @@ const Main = ({
   theme,
   search,
   handleSearchApi,
- 
 }) => {
   const [isLiked, setIsLiked] = useState(false);
-
-  
-
 
   const likeRecipe = (id) => {
     const likedRecipe = recipes.map((item) => {
@@ -89,15 +85,14 @@ const Main = ({
     }
   };
 
-
   const filteredRecipes = recipes.filter((recipe) => {
     return recipe.title.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
     <>
-      <div className={className} id="main-container-new" >
-      <div className="favourite-title">YOUR RECIPES</div>
+      <div className={className} id="main-container-new">
+        <div className="favourite-title">YOUR RECIPES</div>
         <section className="card-grid">
           {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, index) => {
@@ -150,7 +145,10 @@ const Main = ({
                     >
                       <Delete show={show} />
                     </button>
-                    <Link to={`recipes/edit/${item.id}`} className="btn-no-style-test">
+                    <Link
+                      to={`recipes/edit/${item.id}`}
+                      className="btn-no-style-test"
+                    >
                       <Edit show={show} />
                     </Link>
                     <button
@@ -169,10 +167,12 @@ const Main = ({
                 </div>
               );
             })}
-                   <Link to={'/search'} style={{textDecoration: "none"}}><button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button></Link> 
+          <Link to={"/search"} style={{ textDecoration: "none" }}>
+            <button className="remove btn-api" onClick={handleSearchApi}>
+              Search recipes
+            </button>
+          </Link>
         </section>
-
-  
       </div>
     </>
   );

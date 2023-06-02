@@ -247,7 +247,7 @@ const filteredRecipes = recipes.filter((recipe) => {
               
             })}
         </section>
-        <div>Search more Online</div>
+
       </div>
     </>
   );

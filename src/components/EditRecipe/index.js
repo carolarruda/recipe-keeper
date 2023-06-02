@@ -91,7 +91,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
               ></link>
-              <div className="big-container">
+              <div className="big-container" id="set-height">
                 <form
                   className="form-stack recipe-form"
                   onSubmit={handleSubmit}

@@ -703,4 +703,9 @@ h1 {
   #set-height {
     min-height: 115vh;
   }
+
+  .btn-api {
+display: none;
+  }
+
 }

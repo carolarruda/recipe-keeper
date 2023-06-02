@@ -7,12 +7,12 @@
       "course": "main",
       "prep": "00:05",
       "cook": "00:10",
-      "servings": "4",
+      "servings": "9",
       "ingredients": "\n    250 g dry linguine noodles\n    2 tsp (10 mL) olive oil\n    1 medium onion, chopped\n    3 cloves garlic, minced\n    2 roasted red bell peppers from a jar, chopped\n    2 cups (60 g) fresh spinach, chopped\n    1½ Tbsp (25 g) tomato paste\n    1 vegetable bouillon cube, crushed\n    2 Tbsp (30 mL) harissa sauce†\n    1 Tbsp (3 g) dried oregano\n    ½ tsp paprika powder\n    ¼ tsp salt, plus more to taste\n    1 cup (240 mL) soy cooking cream\n    1 cup (134 g) frozen green peas\n    3 Tbsp (7 g) nutritional yeast flakes\n    3 Tbsp (25 g) roasted pine nuts\n    ½ lemon, zested, juiced\n",
       "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
       "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
       "id": 2,
-      "liked": true
+      "liked": false
     },
     {
       "title": "Spicy Garlic Wok Noodles",
@@ -27,20 +27,6 @@
       "notes": "Sirva com cebolinho a gosto \n\n",
       "liked": false,
       "id": 5
-    },
-    {
-      "title": "Chocolate Quente",
-      "photo": "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSGmIN_vH7aKNY6wNKjEhTGgYJ8oOL_w5MunbaDaul-L-ZgDbnChQGPvIWH2Qn9Rht1",
-      "rating": "5",
-      "course": "dessert",
-      "prep": "00:05",
-      "cook": "00:05",
-      "servings": "4",
-      "ingredients": "2 cup leite (gordo)\n30 ml cacau em pó\n30 ml açúcar \n¼ cup de pedaços de chocolate\n0,6 ml tsp extracto de baunilha\n",
-      "instructions": "Coloque o leite, o cacau em pó e o açúcar numa panela pequena. Aqueça em lume médio/médio-baixo, mexendo sempre, até aquecer (mas sem ferver). Adicione as gotas de chocolate e bata constantemente até que o chocolate derreta. Adicione o extrato de baunilha, sirva imediatamente.",
-      "notes": "",
-      "liked": true,
-      "id": 6
     },
     {
       "title": "Bolonhesa de Soja",
