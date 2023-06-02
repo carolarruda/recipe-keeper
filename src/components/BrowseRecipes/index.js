@@ -59,7 +59,7 @@ const BrowseRecipes = ({
               );
             })}
         </section>
-      <button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button>
+
       </div>
     </>
   );

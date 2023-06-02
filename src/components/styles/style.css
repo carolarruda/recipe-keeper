@@ -569,7 +569,7 @@ h1 {
 }
 
 .btn-api:hover {
-  background-color: rgb(197, 226, 231);
+  background-color: rgba(0, 0, 0, 0.2);
   color: black;
 
 }
