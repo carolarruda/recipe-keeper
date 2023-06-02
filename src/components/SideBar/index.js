@@ -4,7 +4,7 @@ import Plus from "../icons/plus";
 import HomeIcon from "../icons/homeIcon";
 import Like from "../icons/like";
 import Settings from "../icons/settings";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 

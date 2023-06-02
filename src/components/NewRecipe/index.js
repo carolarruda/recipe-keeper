@@ -16,6 +16,8 @@ const NewRecipe = ({ recipes, setRecipes }) => {
 
   const navigate = useNavigate()
 
+
+
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -101,7 +103,13 @@ const NewRecipe = ({ recipes, setRecipes }) => {
       });
   }
 
+  const handleCancel = () => {
+
+    navigate(-1)
+  }
+
   return (
+    
     <section className="form-container">
       <link
         rel="stylesheet"
@@ -114,7 +122,6 @@ const NewRecipe = ({ recipes, setRecipes }) => {
               <label htmlFor="recipeTitle">Recipe Title</label>
               <input
                 type="text"
-                required
                 value={title}
                 onChange={handleTitle}
               />
@@ -234,7 +241,7 @@ const NewRecipe = ({ recipes, setRecipes }) => {
             <label htmlFor="recipeIngredients">Ingredients</label>
             <textarea
               type="text"
-              rows="28"
+          
               onChange={handleIngredients}
               value={ingredients}
             />
@@ -244,7 +251,7 @@ const NewRecipe = ({ recipes, setRecipes }) => {
             <label htmlFor="recipeInstructions">Instructions</label>
             <textarea
               type="text"
-              rows="28"
+              
               onChange={handleInstructions}
               value={instructions}
             />
@@ -254,14 +261,14 @@ const NewRecipe = ({ recipes, setRecipes }) => {
             <label htmlFor="notes">Notes</label>
             <textarea
               type="text"
-              rows="28"
+             
               onChange={handleNotes}
               value={notes}
             />
           </div>
           <div className="fifth-column segment">
             <button type="submit">Save</button>
-            <button>Cancel</button>
+            <button onClick={handleCancel}>Cancel</button>
           </div>
         </form>
       </div>

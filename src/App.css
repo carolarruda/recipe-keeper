@@ -7,6 +7,7 @@
 .grid {
   display: grid;
   grid-template-columns: 250px 3fr;
+  height: 100vh
 }
 
 *,
@@ -31,6 +32,7 @@ body {
     display: grid;
     grid-template-columns: 50px 3fr;
   }
+
 
 
 }

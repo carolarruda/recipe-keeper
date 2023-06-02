@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/style.css";
 
 const Settings = ({ className, handleTheme }) => {

@@ -424,7 +424,7 @@ h1 {
 
 .nav-container {
   background-color: rgb(197, 226, 231);
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: 50px 50px 50px;
   position: relative;
@@ -627,7 +627,7 @@ color: rgb(114, 114, 143);
   }
 
   .favourite-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #main-container-favourite {
@@ -638,7 +638,7 @@ color: rgb(114, 114, 143);
   .box {
     min-width: 150px;
     max-width: 150px;
-    height: 150px;
+    height: 160px;
     color: rgb(17, 12, 12);
     font-size: 20px;
     border-radius: 10px;
@@ -657,11 +657,35 @@ color: rgb(114, 114, 143);
     border-radius: 50%;
     background-size: cover;
     background-color: rgba(197, 226, 231, 0.816);   /* //this will need change  */
-  
+    z-index: 0
   }
 
   .recipe-name {
     display: none;
   }
+
+  .add-btn-website {
+    font-size: 12px
+  }
+  
+
+  .btn-no-style svg {
+    position: relative;
+z-index: 9
+  }
+
+  .nav-container {
+    background-color: rgb(197, 226, 231);
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    position: relative;
+   
+  }
+
+  .second-column,  .third-column, .fourth-column, .fifth-column {
+    height: 100px
+  }
+
+  
   
 }
