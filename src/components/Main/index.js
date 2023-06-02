@@ -19,6 +19,10 @@ const Main = ({
 }) => {
   const [isLiked, setIsLiked] = useState(false);
 
+  const handleSearchApi = () => {
+    console.log('hey you made it so far');
+  }
+
 
   const likeRecipe = (id) => {
     const likedRecipe = recipes.map((item) => {
@@ -146,7 +150,7 @@ const Main = ({
                     >
                       <Delete show={show} />
                     </button>
-                    <Link to={`recipes/edit/${item.id}`}>
+                    <Link to={`recipes/edit/${item.id}`} className="btn-no-style-test">
                       <Edit show={show} />
                     </Link>
                     <button
@@ -166,6 +170,7 @@ const Main = ({
               );
             })}
         </section>
+        <button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button>
       </div>
     </>
   );

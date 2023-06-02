@@ -29,7 +29,7 @@ const Favourites = ({
       .then((data) => {
         setWebsites(data);
       });
-  }, []);
+  }, [setWebsites]);
 
   const likeRecipe = (id) => {
     const dislike = {
@@ -144,7 +144,7 @@ const filteredRecipes = recipes.filter((recipe) => {
                       >
                         <Delete show={show} />
                       </button>
-                      <Link to={`recipes/edit/${item.id}`}>
+                      <Link to={`recipes/edit/${item.id}`} className="btn-no-style-test" >
                         <Edit show={show} />
                       </Link>
                       <button
@@ -247,6 +247,7 @@ const filteredRecipes = recipes.filter((recipe) => {
               
             })}
         </section>
+        <div>Search more Online</div>
       </div>
     </>
   );
