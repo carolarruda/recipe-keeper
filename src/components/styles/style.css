@@ -12,7 +12,7 @@
 .big-container {
   justify-content: left;
   border: solid 1px transparent;
-  background-color:rgb(248, 251, 253);
+  background-color:rgb(240, 248, 255);
   width: 100vw;
   min-height: 100vh;
   display: grid;
@@ -616,7 +616,7 @@ color: rgb(114, 114, 143);
 
   #phone-view {
     width: 50px;
-    min-height: 100vh;
+
   }
 
   #search-online {
@@ -712,10 +712,14 @@ z-index: 9
    
   }
 
-  .second-column,  .third-column, .fourth-column, .fifth-column {
-    height: 100px
+  .second-column,  .third-column, .fourth-column {
+    height: 300px
   }
 
+
+  #set-height {
+    min-height: 115vh;
+  }
   
   
 }
