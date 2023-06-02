@@ -596,7 +596,7 @@ color: rgb(114, 114, 143);
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .favourite-title {
+  .favourite-title, .settings-title  {
     font-size: 30px;
   }
 }
@@ -604,7 +604,7 @@ color: rgb(114, 114, 143);
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .favourite-title {
+  .favourite-title, .settings-title  {
     font-size: 18px;
   }
 }
@@ -612,9 +612,6 @@ color: rgb(114, 114, 143);
 @media (max-width: 550px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .big-container {
-    min-height: 100vh;
   }
 
   #phone-view {
@@ -649,13 +646,18 @@ color: rgb(114, 114, 143);
     display: none;
   }
 
-  .favourite-title {
+  .favourite-title, .settings-title  {
     font-size: 14px;
   }
 
   #main-container-favourite {
     grid-template-rows: 30px 1fr 30px 1fr;
     gap: 25px;
+  }
+
+  #main-container-settings {
+    grid-template-rows: 25px 60px;
+    gap: 20px;
   }
 
   #main-container-new {

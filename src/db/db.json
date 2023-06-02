@@ -15,20 +15,6 @@
       "liked": false
     },
     {
-      "title": "Strogonoff de grão",
-      "photo": "http://cozinhafitefat.com.br/wp-content/uploads/2017/12/IG-1-1024x1024.jpg",
-      "rating": "3",
-      "course": "main",
-      "prep": "00:40",
-      "cook": "",
-      "servings": "6",
-      "ingredients": "\n\n1 cup de grão de bico cozido\n1 nata de soja\n1 cebola\n6 dentes de alho picados\nSementes de mostarda\n1 cup de cogumelos Paris\n2 cup de polpa de tomate\n½ cup de água\nCebolinho a gosto\n1 Tbsp de sal",
-      "instructions": "Modo de preparação dos cogumelos\nLave os cogumelos e corte em fatias finas;\nLeve ao fogo em uma frigideira pré-aquecida por 5 minutos, até que o cogumelo solte a água;\nEscorra e reserve.\nModo de preparação do strogonoff\n Numa panela grande pré aquecida, coloque o azeite e as sementes de mostarda.\n Frite até que elas comecem a dourar, ou até que comecem a \"saltar\".\n Adicione o alho e a cebola e refogue por 3 minutos.\n Acrescente o grão de bico e os cogumelos, deixando em lume baixo por aproximadamente 5 minutos.\n Acrescente a polpa de tomate e a água.\n Adicione o sal e deixe cozinhar 10 minutos em lume baixo.\n Desligue e acrescente a nata de soja e o cebolinho.\n",
-      "notes": "Sirva com arroz branco\n\nWebsite: https://www.tudogostoso.com.br/receita/188417-strogonoff-vegano-de-grao-de-bico-e-palmito.html",
-      "liked": false,
-      "id": 4
-    },
-    {
       "title": "Spicy Garlic Wok Noodles",
       "photo": "https://cdn.pickuplimes.com/cache/80/c2/80c2d3cabea2ca8f15a8e9f7ed80f990.jpg",
       "rating": "5",
@@ -153,20 +139,6 @@
       "notes": "",
       "liked": false,
       "id": 13
-    },
-    {
-      "title": "",
-      "photo": "",
-      "rating": "",
-      "course": "",
-      "prep": "",
-      "cook": "",
-      "servings": "",
-      "ingredients": "",
-      "instructions": "",
-      "notes": "",
-      "liked": false,
-      "id": 14
     }
   ],
   "websites": [
