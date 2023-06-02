@@ -118,6 +118,11 @@ padding-top: 12px;
   gap: 20px;
 }
 
+#main-container-new {
+  grid-template-rows: 60px 1fr;
+  gap: 25px;
+}
+
 #main-container-settings {
   grid-template-rows: 60px 60px;
   gap: 20px;
@@ -608,9 +613,13 @@ color: rgb(114, 114, 143);
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .big-container {
+    min-height: 100vh;
+  }
 
   #phone-view {
     width: 50px;
+    min-height: 100vh;
   }
 
   #search-online {
@@ -646,6 +655,11 @@ color: rgb(114, 114, 143);
 
   #main-container-favourite {
     grid-template-rows: 30px 1fr 30px 1fr;
+    gap: 25px;
+  }
+
+  #main-container-new {
+    grid-template-rows: 30px 1fr 30px;
     gap: 25px;
   }
 

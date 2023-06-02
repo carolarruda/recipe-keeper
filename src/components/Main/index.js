@@ -15,13 +15,13 @@ const Main = ({
   handleHoverOut,
   handleDelete,
   theme,
-  search
+  search,
+  handleSearchApi,
+ 
 }) => {
   const [isLiked, setIsLiked] = useState(false);
 
-  const handleSearchApi = () => {
-    console.log('hey you made it so far');
-  }
+  
 
 
   const likeRecipe = (id) => {
@@ -96,8 +96,8 @@ const Main = ({
 
   return (
     <>
-      <div className={className}>
-        <div></div>
+      <div className={className} id="main-container-new" >
+      <div className="favourite-title">YOUR RECIPES</div>
         <section className="card-grid">
           {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, index) => {
@@ -169,8 +169,10 @@ const Main = ({
                 </div>
               );
             })}
+                   <Link to={'/search'}><button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button></Link> 
         </section>
-        <button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button>
+
+  
       </div>
     </>
   );
