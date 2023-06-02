@@ -12,21 +12,7 @@
       "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
       "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
       "id": 2,
-      "liked": false
-    },
-    {
-      "title": "Strogonoff de grão",
-      "photo": "http://cozinhafitefat.com.br/wp-content/uploads/2017/12/IG-1-1024x1024.jpg",
-      "rating": "3",
-      "course": "main",
-      "prep": "00:40",
-      "cook": "",
-      "servings": "6",
-      "ingredients": "\n\n1 cup de grão de bico cozido\n1 nata de soja\n1 cebola\n6 dentes de alho picados\nSementes de mostarda\n1 cup de cogumelos Paris\n2 cup de polpa de tomate\n½ cup de água\nCebolinho a gosto\n1 Tbsp de sal",
-      "instructions": "Modo de preparação dos cogumelos\nLave os cogumelos e corte em fatias finas;\nLeve ao fogo em uma frigideira pré-aquecida por 5 minutos, até que o cogumelo solte a água;\nEscorra e reserve.\nModo de preparação do strogonoff\n Numa panela grande pré aquecida, coloque o azeite e as sementes de mostarda.\n Frite até que elas comecem a dourar, ou até que comecem a \"saltar\".\n Adicione o alho e a cebola e refogue por 3 minutos.\n Acrescente o grão de bico e os cogumelos, deixando em lume baixo por aproximadamente 5 minutos.\n Acrescente a polpa de tomate e a água.\n Adicione o sal e deixe cozinhar 10 minutos em lume baixo.\n Desligue e acrescente a nata de soja e o cebolinho.\n",
-      "notes": "Sirva com arroz branco\n\nWebsite: https://www.tudogostoso.com.br/receita/188417-strogonoff-vegano-de-grao-de-bico-e-palmito.html",
-      "liked": true,
-      "id": 4
+      "liked": true
     },
     {
       "title": "Spicy Garlic Wok Noodles",
@@ -139,6 +125,62 @@
       "notes": "",
       "liked": true,
       "id": 12
+    },
+    {
+      "title": "Lasagna",
+      "photo": "https://www.pingodoce.pt/wp-content/uploads/2015/03/lasanha.jpeg",
+      "rating": "4",
+      "course": "main",
+      "prep": "00:10",
+      "cook": "00:00",
+      "servings": "",
+      "ingredients": "ingredient 1",
+      "instructions": "instruction one",
+      "notes": "",
+      "liked": false,
+      "id": 13
+    },
+    {
+      "title": "ss",
+      "photo": "",
+      "rating": "",
+      "course": "",
+      "prep": "",
+      "cook": "",
+      "servings": "",
+      "ingredients": "",
+      "instructions": "",
+      "notes": "",
+      "liked": false,
+      "id": 14
+    },
+    {
+      "title": "sss",
+      "photo": "",
+      "rating": "",
+      "course": "",
+      "prep": "",
+      "cook": "",
+      "servings": "",
+      "ingredients": "",
+      "instructions": "",
+      "notes": "",
+      "liked": false,
+      "id": 15
+    },
+    {
+      "title": "ssss",
+      "photo": "",
+      "rating": "",
+      "course": "",
+      "prep": "",
+      "cook": "",
+      "servings": "",
+      "ingredients": "",
+      "instructions": "",
+      "notes": "",
+      "liked": false,
+      "id": 16
     }
   ],
   "websites": [

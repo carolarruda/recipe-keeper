@@ -10,6 +10,7 @@ import EditRecipe from "./components/EditRecipe";
 import NewWebsite from "./components/NewWebsite";
 import EditWebsite from "./components/EditWebsite";
 import Settings from "./components/Settings";
+import BrowseRecipes from "./components/BrowseRecipes";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -142,8 +143,6 @@ function App() {
       });
   }, []);
 
-
-
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
     setSearch(searchTerm);
@@ -157,15 +156,29 @@ function App() {
     }
   };
 
+  const [meals, setMeals] = useState([]);
+
+  const handleSearchApi = () => {
+    console.log("my search", search);
+
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setMeals(data.meals);
+      });
+  };
+
   return (
     <div className="grid">
       <SideBar
-        className="nav-container" 
+        className="nav-container"
         theme={theme}
         setRecipes={setRecipes}
         recipes={recipes}
         handleSearch={handleSearch}
         search={search}
+        handleSearchApi={handleSearchApi}
       />
       <Routes>
         <Route
@@ -182,6 +195,9 @@ function App() {
               theme={theme}
               filteredRecipes={filteredRecipes}
               search={search}
+              handleSearchApi={handleSearchApi}
+              meals={meals}
+              setMeals={setMeals}
             />
           }
         />
@@ -259,6 +275,22 @@ function App() {
           path="/settings"
           element={
             <Settings className="main-container" handleTheme={handleTheme} />
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <BrowseRecipes
+              className="main-container"
+              meals={meals}
+              setMeals={setMeals}
+              hoveredCard={hoveredCard}
+              handleHoverIn={handleHoverIn}
+              handleHoverOut={handleHoverOut}
+              theme={theme}
+              handleSearchApi={handleSearchApi}
+         
+            />
           }
         />
       </Routes>

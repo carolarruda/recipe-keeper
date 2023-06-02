@@ -6,16 +6,20 @@ import Like from "../icons/like";
 import Settings from "../icons/settings";
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const SideBar = ({ className, theme, setRecipes, recipes, search, handleSearch }) => {
+const SideBar = ({ className, theme, setRecipes, recipes, search, handleSearch, handleSearchApi }) => {
   const [setings, setSettings] = useState("#64648C");
   const [home, setHome] = useState("#64648C");
   const [favorites, setFavorites] = useState("#64648C");
   const [add, setAdd] = useState("#64648C");
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    handleSearchApi()
+    navigate('/search')
   };
 
 

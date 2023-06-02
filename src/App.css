@@ -3,11 +3,14 @@
 * {
   margin: 0px;
   font-family: "Playfair Display", serif;
+  
+  
 }
 .grid {
   display: grid;
   grid-template-columns: 250px 3fr;
-  height: 100vh
+  min-height: 100vh;
+  background-color: rgb(240, 248, 255);
 }
 
 *,

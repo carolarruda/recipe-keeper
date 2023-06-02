@@ -15,9 +15,13 @@ const Main = ({
   handleHoverOut,
   handleDelete,
   theme,
-  search
+  search,
+  handleSearchApi,
+ 
 }) => {
   const [isLiked, setIsLiked] = useState(false);
+
+  
 
 
   const likeRecipe = (id) => {
@@ -92,8 +96,8 @@ const Main = ({
 
   return (
     <>
-      <div className={className}>
-        <div></div>
+      <div className={className} id="main-container-new" >
+      <div className="favourite-title">YOUR RECIPES</div>
         <section className="card-grid">
           {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, index) => {
@@ -146,7 +150,7 @@ const Main = ({
                     >
                       <Delete show={show} />
                     </button>
-                    <Link to={`recipes/edit/${item.id}`}>
+                    <Link to={`recipes/edit/${item.id}`} className="btn-no-style-test">
                       <Edit show={show} />
                     </Link>
                     <button
@@ -165,7 +169,10 @@ const Main = ({
                 </div>
               );
             })}
+                   <Link to={'/search'}><button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button></Link> 
         </section>
+
+  
       </div>
     </>
   );
