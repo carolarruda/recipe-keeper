@@ -6,46 +6,53 @@ import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 import Pdf from "../icons/pdf";
 import { Link } from "react-router-dom";
-import * as React from 'react';
+import * as React from "react";
 import html2pdf from "html2pdf.js";
 import { useRef } from "react";
 
-const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, theme }) => {
+const RecipeView = ({
+  recipes,
+  setRecipes,
+  handleDeleteRecipe,
+  hoveredCard,
+  theme,
+}) => {
   const params = useParams();
   const containerRef = useRef(null);
 
   const handleDownload = (e) => {
     const containerElement = containerRef.current;
-  
+
     const pageWidth = containerElement.offsetWidth;
     const pageHeight = containerElement.offsetHeight;
-  
+
     const clonedContainer = containerElement.cloneNode(true);
 
     const buttons = clonedContainer.querySelectorAll(".icons-container button");
     buttons.forEach((button) => {
       button.parentNode.removeChild(button);
     });
-  
+
     const editLink = clonedContainer.querySelector(`a[href*="recipes/edit/"]`);
     if (editLink) {
       editLink.parentNode.removeChild(editLink);
     }
-  
+
     html2pdf()
       .set({
         margin: 0,
         filename: "recipe.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, logging: true },
-        jsPDF: { unit: "px", format: [pageWidth, pageHeight], orientation: "portrait" },
+        jsPDF: {
+          unit: "px",
+          format: [pageWidth, pageHeight],
+          orientation: "portrait",
+        },
       })
       .from(clonedContainer)
       .save();
   };
-  
-  
-  
 
   const calcTime = () => {
     const recipe = recipes.find((recipe) => recipe.id.toString() === params.id);
@@ -60,7 +67,7 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
 
     const [prepHours, prepMinutes] = recipe.prep.split(":").map(Number);
     const [cookHours, cookMinutes] = recipe.cook.split(":").map(Number);
- 
+
     let totalMinutes =
       prepHours * 60 + prepMinutes + cookHours * 60 + cookMinutes;
 
@@ -74,38 +81,37 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
 
   return (
     <div className="grid-container" ref={containerRef}>
-
-      {recipes.map(
-        (recipe, index) => {
-          if(recipe.id.toString() === `${params.id}`) {
-
+      {recipes.map((recipe, index) => {
+        if (recipe.id.toString() === `${params.id}`) {
           return (
-            <React.Fragment key={`${recipe.id}`} >
-              <section 
-                key={Math.random()} 
+            <React.Fragment key={`${recipe.id}`}>
+              <section
+                key={Math.random()}
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
               >
-                   <div className="icons-container margin-add">
-                   <button
+               
+                <div className="icons-container margin-add test-position">
+                  <button
                     onClick={handleDownload}
                     className="btn-no-style"
-                    value={`${recipe.name}`} 
-                    style={{marginRight: "10px"}} 
-                    
+                    value={`${recipe.name}`}
+                    style={{ marginRight: "10px" }}
                   >
                     <Pdf fill={theme} />
                   </button>
                   <button
                     onClick={() => handleDeleteRecipe(recipe.id)}
                     className="btn-no-style"
-                    style={{marginRight: "10px"}} 
-                  
+                    style={{ marginRight: "10px" }}
                   >
                     <Delete fill={theme} />
                   </button>
-                  <Link to={`recipes/edit/${recipe.id}`}  style={{marginRight: "10px"}}   >
-                    <Edit fill={theme}/>
+                  <Link
+                    to={`recipes/edit/${recipe.id}`}
+                    style={{ marginRight: "10px" }}
+                  >
+                    <Edit fill={theme} />
                   </Link>
                 </div>
               </section>
@@ -210,7 +216,7 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
                   )}
                 </ul>
               </section>
-              <section className="right" >
+              <section className="right">
                 <h1>Instructions</h1>
                 <br />
                 <ol>
@@ -226,10 +232,9 @@ const RecipeView = ({ recipes, setRecipes, handleDeleteRecipe, hoveredCard, them
               </section>
               <section className="bottom"></section>
             </React.Fragment>
-          )
+          );
         }
-      } 
-      )}
+      })}
     </div>
   );
 };

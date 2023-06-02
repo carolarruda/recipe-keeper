@@ -1,9 +1,9 @@
 {
   "recipes": [
     {
-      "title": "Vegan Harissa Pasta",
+      "title": "Vegan Harissa Pasta YAY",
       "photo": "https://cdn.pickuplimes.com/cache/a1/c6/a1c6de57c148dc9f7159fc94c4d67727.jpg",
-      "rating": "2",
+      "rating": "3",
       "course": "main",
       "prep": "00:05",
       "cook": "00:10",
@@ -12,7 +12,7 @@
       "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
       "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
       "id": 2,
-      "liked": false
+      "liked": true
     },
     {
       "title": "Spicy Garlic Wok Noodles",
@@ -67,27 +67,13 @@
       "ingredients": "Bulgur\n3 cups (420 g) de bulgur\n3 cups (720 ml) de água\nMolho\n96 g de extrato de tomate\n88 mL de água\n45 mL de azeite\n45 mL xarope de ácer\n 2 limões pequenos, espremidos\n 5 g de sal\nCamadas\n3 cups (594 g) de lentilhas cozidas\n2 pepinos pequenos em cubos\n2 cebola pequenas roxas em fatias finas\n203 g de azeitonas verdes cortadas ao meio\n3 cups (447 g) de tomate cereja, cortados ao meio\n24 g de salsa fresca\n\n",
       "instructions": " Numa panela média, adicione o bulgur e a água. Deixe ferver, reduza para lume baixo, tapar e cozinhar por 15 minutos. Desligue o fogo, mexa o bulgur, tapar e deixe em repouso 10 minutos. De seguida, enxágue com água fria.\n Numa tigela média, adicione a pasta de tomate, a água, o azeite, o xarope de ácer e o sumo de limão e o sal. Misture bem.\n Montar a salada começando pelo molho na base, seguido pelo bulgur cozido, depois lentilhas, pepino, cebola roxa, azeitonas, tomates e salsa. Aproveitar!",
       "notes": "",
-      "liked": false,
+      "liked": true,
       "id": 9
-    },
-    {
-      "title": "Massa Carbonara",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/1920px-Espaguetis_carbonara.jpg",
-      "rating": "5",
-      "course": "main",
-      "prep": "00:30",
-      "cook": "00:30",
-      "servings": "4",
-      "ingredients": "220g esparguete\n50g pecorino\n4 gemas\n80g guanciale (bacon)\nSal e pimenta a gosto\nágua do Esparguete",
-      "instructions": " Cozer o esparguete conforme instruçōes do pacote\n Cortar o bacon em pedaços pequenos e fritar\n Ralar o queijo e misturar com o sal, a pimenta, sal e as gemas até fazer ficar tudo bem envolvido\n Meter o recipiente com a past em banho Maria para o queijo poder derreter e colocar um pouco de água para a mistura ficar mais líquida\n Misturar a pasta com o esparguete e com o bacon e servir!",
-      "notes": "",
-      "liked": false,
-      "id": 10
     },
     {
       "title": "Strogonoff de Vaca e Cogumelos",
       "photo": "https://www.recipetineats.com/wp-content/uploads/2018/01/Beef-Stroganoff_2-1-1.jpg",
-      "rating": "4",
+      "rating": "5",
       "course": "main",
       "prep": "00:15",
       "cook": "00:40",
@@ -95,7 +81,7 @@
       "ingredients": "1 tbsp de manteiga\n120g de cogumelos\n1 cebola pequena (meia lua)\n450g de carne de vaca\n2 dentes de alho\n1/2 tsp de tomilho\n1 tsp de paprica\n2-3 tbsp de farinha de trigo\n3 cups caldo de vaca\n1/2 tsp Worcestershire\n1 tbsp mostarda Dijon\n1/2 cup sour cream\nMassa ",
       "instructions": " Tempere o bife previamente cortado com sal e pimenta.\n Frite o bife em uma frigideira untada com óleo e depois de pronto retire.\n Na mesma frigideira frite a manteiga, a cebola, os cogumelos, o sal e a pimenta.\n Depois de cozido, adicione alho, tomilho, paprica, farinha e cozinhe por 1 minuto.\n Regue com vinho branco e reduza.\n Adicione o caldo de carne e cozinhe até engrossar.\n Misture o sour cream, o molho inglês e a mostarda.\n Junte a carne e a massa.\n Finalize com salsa.",
       "notes": "",
-      "liked": false,
+      "liked": true,
       "id": 11
     },
     {
