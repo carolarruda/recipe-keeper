@@ -169,7 +169,7 @@ const Main = ({
                 </div>
               );
             })}
-                   <Link to={'/search'}><button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button></Link> 
+                   <Link to={'/search'} style={{textDecoration: "none"}}><button className="remove btn-api" onClick={handleSearchApi}>Search recipes</button></Link> 
         </section>
 
   
