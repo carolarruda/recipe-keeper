@@ -90,7 +90,6 @@ const RecipeView = ({
                 className="content"
                 style={{ backgroundImage: `url(${recipe.photo})` }}
               >
-               
                 <div className="icons-container margin-add test-position">
                   <button
                     onClick={handleDownload}
@@ -98,20 +97,20 @@ const RecipeView = ({
                     value={`${recipe.name}`}
                     style={{ marginRight: "10px" }}
                   >
-                    <Pdf fill={theme} />
+                    <Pdf fill={`rgb(48, 80, 91)`} />
                   </button>
                   <button
                     onClick={() => handleDeleteRecipe(recipe.id)}
                     className="btn-no-style"
                     style={{ marginRight: "10px" }}
                   >
-                    <Delete fill={theme} />
+                    <Delete fill={`rgb(48, 80, 91)`} />
                   </button>
                   <Link
                     to={`recipes/edit/${recipe.id}`}
                     style={{ marginRight: "10px" }}
                   >
-                    <Edit fill={theme} />
+                    <Edit fill={`rgb(48, 80, 91)`} />
                   </Link>
                 </div>
               </section>

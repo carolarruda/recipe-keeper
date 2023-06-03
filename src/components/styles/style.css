@@ -518,6 +518,7 @@ h1 {
 .btn-add:active {
   box-shadow: inset 0px 3px 7px transparent;
   transform: translateY(2px);
+  border-left: 4px solid rgba(240, 235, 235, 0.8);
 }
 
 .end-page {
@@ -607,7 +608,10 @@ h1 {
 @media (max-width: 550px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 15px;
   }
+  
 
   #phone-view {
     width: 50px;
@@ -623,8 +627,7 @@ h1 {
   }
 
   .btn-add:hover {
-    border-left: 4px solid rgb(227, 87, 79);
-    background-color: rgb(136, 136, 190);
+
     cursor: pointer;
   }
 
@@ -647,17 +650,20 @@ h1 {
 
   #main-container-favourite {
     grid-template-rows: 30px 1fr 30px 1fr;
-    gap: 25px;
+    gap: 10px;
+    padding-left: 10px;
   }
 
   #main-container-settings {
     grid-template-rows: 25px 60px;
-    gap: 20px;
+    gap: 10px;
+    padding-left: 10px;
   }
 
   #main-container-new {
     grid-template-rows: 30px 1fr 30px;
-    gap: 25px;
+    gap: 10px;
+    padding-left: 10px;
   }
 
   .box {
@@ -772,5 +778,14 @@ h1 {
   .right {
     margin-top: 4px;
     padding-top: 0px;
+  }
+
+  .icons-container {
+    top: 0px;
+    right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 9;
   }
 }

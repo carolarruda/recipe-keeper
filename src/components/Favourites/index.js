@@ -22,6 +22,18 @@ const Favourites = ({
 }) => {
 
   const [isLiked, setIsLiked] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:4000/websites")
@@ -95,7 +107,7 @@ const filteredRecipes = recipes.filter((recipe) => {
       
               const boxstyle = {
                 backgroundImage: `url(${item.photo})`,
-                filter: isHovered
+                filter: isHovered || windowWidth <= 500 
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
 
@@ -109,13 +121,15 @@ const filteredRecipes = recipes.filter((recipe) => {
               };
 
               const show = {
-                fill: isHovered ? "#30505b" : "transparent",
+                fill: isHovered || windowWidth <= 500 ? "#30505b" : "transparent",
+                width: windowWidth <= 500 ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",
               };
               const showRed = {
-                fill: isHovered ? "red" : "transparent",
+                fill: isHovered || windowWidth <= 500  ? "rgb(185, 14, 10)" : "transparent",
+                width: windowWidth <= 500 ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",
@@ -180,7 +194,7 @@ const filteredRecipes = recipes.filter((recipe) => {
               const isHoveredTwo = hoveredCardTwo === index;
               const boxstyle = {
                 backgroundImage: `url(${website.image})`,
-                filter: isHoveredTwo
+                filter: isHoveredTwo  || windowWidth <= 500
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
                 // minHeight: isHovered ? "280px" : "275px",
@@ -195,7 +209,8 @@ const filteredRecipes = recipes.filter((recipe) => {
               };
 
               const show = {
-                fill: isHoveredTwo ? "#30505b" : "transparent",
+                fill: isHoveredTwo || windowWidth <= 500 ? "#30505b" : "transparent",
+                width: windowWidth <= 500 ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",

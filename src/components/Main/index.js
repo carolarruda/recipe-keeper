@@ -4,7 +4,7 @@ import Delete from "../icons/delete";
 import Edit from "../icons/edit";
 import Heart from "../icons/heart";
 import LikeRed from "../icons/likeRed";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Main = ({
   className,
@@ -19,6 +19,18 @@ const Main = ({
   handleSearchApi,
 }) => {
   const [isLiked, setIsLiked] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const likeRecipe = (id) => {
     const likedRecipe = recipes.map((item) => {
@@ -99,7 +111,7 @@ const Main = ({
               const isHovered = hoveredCard === index;
               const boxstyle = {
                 backgroundImage: `url(${item.photo})`,
-                filter: isHovered
+                filter: isHovered || windowWidth <= 500 
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
               };
@@ -111,13 +123,15 @@ const Main = ({
               };
 
               const show = {
-                fill: isHovered ? "#30505b" : "transparent",
+                fill: isHovered || windowWidth <= 500 ? "#30505b" : "transparent",
+                width: windowWidth <= 500 ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",
               };
               const showRed = {
-                fill: isHovered ? "red" : "transparent",
+                fill: isHovered || windowWidth <= 500  ? "rgb(185, 14, 10)" : "transparent",
+                width: windowWidth <= 500 ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",

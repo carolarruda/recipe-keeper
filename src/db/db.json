@@ -1,20 +1,6 @@
 {
   "recipes": [
     {
-      "title": "Vegan Harissa Pasta YAY",
-      "photo": "https://cdn.pickuplimes.com/cache/a1/c6/a1c6de57c148dc9f7159fc94c4d67727.jpg",
-      "rating": "3",
-      "course": "main",
-      "prep": "00:05",
-      "cook": "00:10",
-      "servings": "9",
-      "ingredients": "\n    250 g dry linguine noodles\n    2 tsp (10 mL) olive oil\n    1 medium onion, chopped\n    3 cloves garlic, minced\n    2 roasted red bell peppers from a jar, chopped\n    2 cups (60 g) fresh spinach, chopped\n    1½ Tbsp (25 g) tomato paste\n    1 vegetable bouillon cube, crushed\n    2 Tbsp (30 mL) harissa sauce†\n    1 Tbsp (3 g) dried oregano\n    ½ tsp paprika powder\n    ¼ tsp salt, plus more to taste\n    1 cup (240 mL) soy cooking cream\n    1 cup (134 g) frozen green peas\n    3 Tbsp (7 g) nutritional yeast flakes\n    3 Tbsp (25 g) roasted pine nuts\n    ½ lemon, zested, juiced\n",
-      "instructions": "\n    Cook the pasta according to the package instructions, draining it 1 minute before it's al dente. Just before draining, reserve ½ cup (120 mL) of the pasta cooking water.\n    To a sauté pan on high heat, add the olive oil. While the oil heats up, chop the onion and add it to the pan to cook for 4 - 5 minutes. Meanwhile, continue with the next step.\n    Mince the garlic, and chop the roasted red bell peppers and spinach.\n    Add the garlic to the pot to cook for 2 minutes, stirring often. When lightly golden, add in the tomato paste, bouillon cube, harissa, oregano, paprika powder, and salt, and cook this for another 2 minutes.\n    Add the reserved pasta cooking water to the pan, then drain the pasta.\n    Add the drained pasta to the pan as well, along with all the remaining ingredients: the cooking cream, peas, nutritional yeast, pine nuts, bell pepper, and spinach.\n    Once heated through, add some lemon zest (optional) and squeeze over the lemon juice. Garnish and enjoy!\n",
-      "notes": " Harissa offers a deep tangy and spicy flavour, so add less if you'd prefer less heat.",
-      "id": 2,
-      "liked": true
-    },
-    {
       "title": "Spicy Garlic Wok Noodles",
       "photo": "https://cdn.pickuplimes.com/cache/80/c2/80c2d3cabea2ca8f15a8e9f7ed80f990.jpg",
       "rating": "5",
@@ -81,7 +67,7 @@
       "ingredients": "1 tbsp de manteiga\n120g de cogumelos\n1 cebola pequena (meia lua)\n450g de carne de vaca\n2 dentes de alho\n1/2 tsp de tomilho\n1 tsp de paprica\n2-3 tbsp de farinha de trigo\n3 cups caldo de vaca\n1/2 tsp Worcestershire\n1 tbsp mostarda Dijon\n1/2 cup sour cream\nMassa ",
       "instructions": " Tempere o bife previamente cortado com sal e pimenta.\n Frite o bife em uma frigideira untada com óleo e depois de pronto retire.\n Na mesma frigideira frite a manteiga, a cebola, os cogumelos, o sal e a pimenta.\n Depois de cozido, adicione alho, tomilho, paprica, farinha e cozinhe por 1 minuto.\n Regue com vinho branco e reduza.\n Adicione o caldo de carne e cozinhe até engrossar.\n Misture o sour cream, o molho inglês e a mostarda.\n Junte a carne e a massa.\n Finalize com salsa.",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 11
     },
     {

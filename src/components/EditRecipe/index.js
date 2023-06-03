@@ -218,7 +218,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
                     <label htmlFor="recipeIngredients">Ingredients</label>
                     <textarea
                       type="text"
-                      rows="28"
+          
                       onChange={(e)=> handleChange(e, setIngredients)}
                       value={ingredients}
                     />
@@ -228,8 +228,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
                     <label htmlFor="recipeInstructions">Instructions</label>
                     <textarea
                       type="text"
-                      rows="28"
-                      onChange={(e)=> handleChange(e, setInstructions)}
+                            onChange={(e)=> handleChange(e, setInstructions)}
                       value={instructions}
                     />
                   </div>
@@ -238,7 +237,7 @@ const EditRecipe = ({ recipes, setRecipes }) => {
                     <label htmlFor="notes">Notes</label>
                     <textarea
                       type="text"
-                      rows="28"
+  
                       onChange={(e)=> handleChange(e, setNotes)}
                       value={notes}
                     />
