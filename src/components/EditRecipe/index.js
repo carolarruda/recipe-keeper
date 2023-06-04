@@ -17,11 +17,9 @@ const EditRecipe = ({ recipes, setRecipes }) => {
   const [instructions, setInstructions] = useState("");
   const [notes, setNotes] = useState("");
 
-  useEffect(() => {
-    fetchInitialValue();
-  }, []);
 
-  const fetchInitialValue = () => {
+  useEffect(() => {
+const fetchInitialValue = () => {
     fetch(`http://localhost:4000/recipes/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
@@ -40,6 +38,12 @@ const EditRecipe = ({ recipes, setRecipes }) => {
         console.error("Error fetching initial value:", error);
       });
   };
+
+  fetchInitialValue()
+  }, [params.id])
+  
+
+
 
   function handleSubmit(e) {
     e.preventDefault();

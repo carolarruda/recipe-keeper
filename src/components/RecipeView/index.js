@@ -233,6 +233,9 @@ const RecipeView = ({
             </React.Fragment>
           );
         }
+        else {
+          return null
+        }
       })}
     </div>
   );

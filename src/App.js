@@ -70,6 +70,8 @@ function App() {
       if (recipe.id !== id) {
         return recipe;
       }
+      else {
+        return null}
     });
     setRecipes(filteredRecipes);
 
@@ -87,7 +89,7 @@ function App() {
           });
       })
     )
-
+   
   };
 
   const handleDeleteRecipe = (id) => {
@@ -95,6 +97,8 @@ function App() {
       if (recipe.id !== id) {
         return recipe;
       }
+      else {
+        return null}
     });
     setRecipes(filteredRecipes);
 
@@ -121,6 +125,7 @@ function App() {
       if (website.id !== id) {
         return website;
       }
+      return null;
     });
     setWebsites(filteredWebsites);
 
@@ -164,6 +169,7 @@ function App() {
       });
       setFilteredRecipes(filteredRecipes);
     }
+    return null;
   };
 
   const [meals, setMeals] = useState([]);
@@ -195,8 +201,8 @@ function App() {
     setRecipes(likedRecipe);
 
     const isRecipeLiked =
-      likedRecipe.find((item) => item.id === id)?.liked || false;
-    setIsLiked(isRecipeLiked);
+    likedRecipe.find((item) => item.id === id)?.liked || false;
+  setIsLiked(isRecipeLiked);
 
 
     const url = `http://localhost:4000/recipes/${id}`;

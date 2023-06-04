@@ -10,23 +10,26 @@ const EditWebsite = ({ websites, setWebsites }) => {
   const [image, setImage] = useState("");
   const [url, setUrl] = useState("");
 
+
+  
   useEffect(() => {
+    const fetchInitialValueTwo = () => {
+      fetch(`http://localhost:4000/websites/${params.id}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setName(data.name);
+          setImage(data.image);
+          setUrl(data.url);
+        })
+        .catch((error) => {
+          console.error("Error fetching initial value:", error);
+        });
+    };
+  
     fetchInitialValueTwo();
-  }, []);
-
-  const fetchInitialValueTwo = () => {
-    fetch(`http://localhost:4000/websites/${params.id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setName(data.name);
-        setImage(data.image);
-        setUrl(data.url);
-      })
-      .catch((error) => {
-        console.error("Error fetching initial value:", error);
-      });
-  };
-
+  }, [params.id]);
+  
+  
   
   function handleSubmit(e) {
     e.preventDefault();
