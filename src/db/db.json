@@ -39,7 +39,7 @@
       "ingredients": "\n198 g de polpa de maracujá, sem as sementes (usar coador)\n180 ml de leite condensado\n6 ovos, batidos\n2 cups (470 ml) de natas\n1 tbsp (15 ml) de extrato de baunilha\n1/2 cup (120 ml) de água\n1 cup (240 ml) de açúcar",
       "instructions": " Misture o maracujá, o leite condensado, os ovos, as natas e a baunilha, bater até ficar homogêneo.\n Numa panela pequena, aqueça a água e o açúcar em lume médio-alto.\n Deixe ferver e cozinhe por quinze a vinte minutos, mexendo frequentemente, até que o caramelo fique com uma cor dourada escura.\n Colocar o caramelo na forma e colocar no frigorífico por quinze minutos.\n Pré-aqueça o forno a 180 C.\n Despeje a mistura de leite sobre o caramelo.\n Ir ao forno em banho maria cerca de 45 min ou até que o creme esteja firme no meia e levemente dourado \n Retire do forno e coloque no firgorífico para arrefecer durante pelo menos uma hora.\n Sirva frio.",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 8
     },
     {
@@ -67,7 +67,7 @@
       "ingredients": "1 tbsp de manteiga\n120g de cogumelos\n1 cebola pequena (meia lua)\n450g de carne de vaca\n2 dentes de alho\n1/2 tsp de tomilho\n1 tsp de paprica\n2-3 tbsp de farinha de trigo\n3 cups caldo de vaca\n1/2 tsp Worcestershire\n1 tbsp mostarda Dijon\n1/2 cup sour cream\nMassa ",
       "instructions": " Tempere o bife previamente cortado com sal e pimenta.\n Frite o bife em uma frigideira untada com óleo e depois de pronto retire.\n Na mesma frigideira frite a manteiga, a cebola, os cogumelos, o sal e a pimenta.\n Depois de cozido, adicione alho, tomilho, paprica, farinha e cozinhe por 1 minuto.\n Regue com vinho branco e reduza.\n Adicione o caldo de carne e cozinhe até engrossar.\n Misture o sour cream, o molho inglês e a mostarda.\n Junte a carne e a massa.\n Finalize com salsa.",
       "notes": "",
-      "liked": false,
+      "liked": true,
       "id": 11
     },
     {
@@ -97,6 +97,12 @@
       "image": "https://download.cnet.com/a/img/resize/bfa8575e8a3c61066e2b9dc8264082abff09f767/catalog/2020/05/11/b84ef40b-b6e3-4b63-aaf2-aa0283d709af/imgingest-8676716563213811209.png?auto=webp&fit=crop&width=64",
       "url": "https://cookieandkate.com/",
       "id": 3
+    },
+    {
+      "name": "x bf",
+      "image": "",
+      "url": "",
+      "id": 4
     }
   ]
 }

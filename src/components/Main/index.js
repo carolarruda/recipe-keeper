@@ -18,7 +18,7 @@ const Main = ({
   search,
   handleSearchApi,
 }) => {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   let forMobile = 550
 
@@ -34,6 +34,7 @@ const Main = ({
   }, []);
 
   const likeRecipe = (id) => {
+    
     const likedRecipe = recipes.map((item) => {
       if (item.id === id) {
         return {
@@ -51,6 +52,9 @@ const Main = ({
       likedRecipe.find((item) => item.id === id)?.liked || false;
     setIsLiked(isRecipeLiked);
 
+
+    const url = `http://localhost:4000/recipes/${id}`;
+
     if (isLiked) {
       const dislike = {
         liked: false,
@@ -63,16 +67,12 @@ const Main = ({
         },
         body: JSON.stringify(dislike),
       };
-      fetch(`http://localhost:4000/recipes/${id}`, optLike)
+
+     
+
+      fetch(url, optLike)
         .then((response) => response.json())
-        .then(() => {
-          fetch("http://localhost:4000/recipes")
-            .then((response) => response.json())
-            .then((data) => {
-              setRecipes(data);
-              setIsLiked(false);
-            });
-        });
+
     } else {
       const LikedRecipe = {
         liked: true,
@@ -85,16 +85,10 @@ const Main = ({
         },
         body: JSON.stringify(LikedRecipe),
       };
-      fetch(`http://localhost:4000/recipes/${id}`, optLike)
+      fetch(url, optLike)
         .then((response) => response.json())
-        .then(() => {
-          fetch("http://localhost:4000/recipes")
-            .then((response) => response.json())
-            .then((data) => {
-              setRecipes(data);
-              setIsLiked(true);
-            });
-        });
+
+
     }
   };
 
