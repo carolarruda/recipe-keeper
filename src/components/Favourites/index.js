@@ -23,6 +23,7 @@ const Favourites = ({
 
   const [isLiked, setIsLiked] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  let forMobile = 550;
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
@@ -121,15 +122,15 @@ const filteredRecipes = recipes.filter((recipe) => {
               };
 
               const show = {
-                fill: isHovered || windowWidth <= 500 ? "#30505b" : "transparent",
-                width: windowWidth <= 500 ? "22px" : "30px",
+                fill: isHovered || windowWidth <= `${forMobile}` ? "#30505b" : "transparent",
+                width: windowWidth <= `${forMobile}` ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",
               };
               const showRed = {
-                fill: isHovered || windowWidth <= 500  ? "rgb(185, 14, 10)" : "transparent",
-                width: windowWidth <= 500 ? "22px" : "30px",
+                fill: isHovered || windowWidth <= `${forMobile}`  ? "rgb(185, 14, 10)" : "transparent",
+                width: windowWidth <= `${forMobile}` ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",

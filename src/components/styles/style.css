@@ -97,8 +97,6 @@
   grid-template-rows: 30px 30px;
 }
 
-/* no repeats until here */
-
 /* Favoutites styling and Main */
 
 .main-container {
@@ -174,7 +172,7 @@
   place-self: center;
   border-radius: 50%;
   background-size: cover;
-  background-color: rgba(197, 226, 231, 0.816); /* //this will need change  */
+  background-color: rgba(197, 226, 231, 0.816); 
 }
 
 .btn-no-style {
@@ -270,7 +268,6 @@
   background-size: cover;
   background-position: 0px;
   filter: grayscale(20%);
-
 }
 
 .image-test {
@@ -279,10 +276,7 @@
   filter: grayscale(20%);
   height: 200px;
   width: 100vw;
-
 }
-
-
 
 .top {
   grid-area: top;
@@ -485,6 +479,7 @@ h1 {
   font-size: 14px;
   color: rgb(114, 114, 143);
   font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 .remove:hover {
@@ -527,9 +522,7 @@ h1 {
   margin-bottom: 60px;
 }
 
-/* .margin-add > button {
-      margin: 10px
-    } */
+
 
 #search-online {
   background: transparent;
@@ -547,6 +540,7 @@ h1 {
   transition: border-color 0.3s ease;
   font-weight: 600;
   transition: font-size 0.3s;
+  font-family: "Montserrat", sans-serif;
 }
 
 #search-online:hover {
@@ -559,24 +553,19 @@ h1 {
 }
 
 .btn-api {
-  /* display: grid; */
-  /* justify-self: right;
-  align-content: start; */
+
   font-size: 16px;
   height: 50px;
-  /* margin: 30px; */
-
+  color: rgb(100, 99, 99);
+  font-weight: 400;
   display: inline-block;
   padding: 0.3em 1.2em;
   margin: 0 0.3em 0.3em 0;
   border-radius: 10px;
   box-sizing: border-box;
   text-decoration: none;
-  /* font-family: "Roboto", sans-serif; */
-  font-weight: 300;
-  color: rgb(128, 128, 128) f;
+  font-family: "Montserrat", sans-serif;
   background-color: rgba(0, 0, 0, 0.1);
-
   text-align: center;
   transition: all 0.2s;
 }
@@ -590,19 +579,18 @@ h1 {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .favourite-title,
-  .settings-title {
-    font-size: 30px;
-  }
+
 }
 @media screen and (min-width: 550px) and (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .favourite-title,
-  .settings-title {
-    font-size: 18px;
-  }
+
+}
+@media screen and (min-width: 550px) and (max-width: 820px) {
+#main-container-favourite {
+  grid-template-rows: 120px 1fr 120px 1fr;
+}
 }
 
 @media (max-width: 550px) {
@@ -611,7 +599,6 @@ h1 {
     column-gap: 5px;
     row-gap: 15px;
   }
-  
 
   #phone-view {
     width: 50px;
@@ -627,7 +614,6 @@ h1 {
   }
 
   .btn-add:hover {
-
     cursor: pointer;
   }
 

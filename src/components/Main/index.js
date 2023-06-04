@@ -20,6 +20,7 @@ const Main = ({
 }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  let forMobile = 550
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
@@ -111,7 +112,7 @@ const Main = ({
               const isHovered = hoveredCard === index;
               const boxstyle = {
                 backgroundImage: `url(${item.photo})`,
-                filter: isHovered || windowWidth <= 500 
+                filter: isHovered || windowWidth <= `${forMobile}` 
                   ? "brightness(95%)"
                   : "blur(1px) brightness(90%) grayscale(30%)",
               };
@@ -123,15 +124,15 @@ const Main = ({
               };
 
               const show = {
-                fill: isHovered || windowWidth <= 500 ? "#30505b" : "transparent",
-                width: windowWidth <= 500 ? "22px" : "30px",
+                fill: isHovered || windowWidth <= `${forMobile}` ? "#30505b" : "transparent",
+                width: windowWidth <= `${forMobile}` ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",
               };
               const showRed = {
-                fill: isHovered || windowWidth <= 500  ? "rgb(185, 14, 10)" : "transparent",
-                width: windowWidth <= 500 ? "22px" : "30px",
+                fill: isHovered || windowWidth <= `${forMobile}`  ? "rgb(185, 14, 10)" : "transparent",
+                width: windowWidth <= `${forMobile}` ? "22px" : "30px",
                 padding: "3px",
                 display: "grid",
                 justifyContent: "center",

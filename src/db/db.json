@@ -17,14 +17,14 @@
     {
       "title": "Bolonhesa de Soja",
       "photo": "https://veganonboard.com/wp-content/uploads/2021/05/vegan-spaghetti-bolognese-11.webp",
-      "rating": "3",
+      "rating": "2",
       "course": "main",
       "prep": "00:20",
       "cook": "00:20",
       "servings": "6",
       "ingredients": "soja granulada (500g);\n1 cebola picada;\n3 dentes de alho picados;\n2 cup de polpa de tomate;\n1 pimento amarelo;\n1 pimento vermelho;\nOrégãos a gosto;\nPimenta a gosto;\nPaprika a gosto;\nSal a gosto;",
       "instructions": " Cozinhar a soja seguindo as instruções do pacote\n Faça um refogado com a cebola e os dentes de alho até ficarem translucidos.\n Adicione a soja, a polpa de tomate, os pimentos e os temperos. Deixe cozinhar mais alguns minutos.\nRetificar os temperos e já está. ",
-      "notes": "YOOO",
+      "notes": "",
       "liked": false,
       "id": 7
     },
@@ -53,7 +53,7 @@
       "ingredients": "Bulgur\n3 cups (420 g) de bulgur\n3 cups (720 ml) de água\nMolho\n96 g de extrato de tomate\n88 mL de água\n45 mL de azeite\n45 mL xarope de ácer\n 2 limões pequenos, espremidos\n 5 g de sal\nCamadas\n3 cups (594 g) de lentilhas cozidas\n2 pepinos pequenos em cubos\n2 cebola pequenas roxas em fatias finas\n203 g de azeitonas verdes cortadas ao meio\n3 cups (447 g) de tomate cereja, cortados ao meio\n24 g de salsa fresca\n\n",
       "instructions": " Numa panela média, adicione o bulgur e a água. Deixe ferver, reduza para lume baixo, tapar e cozinhar por 15 minutos. Desligue o fogo, mexa o bulgur, tapar e deixe em repouso 10 minutos. De seguida, enxágue com água fria.\n Numa tigela média, adicione a pasta de tomate, a água, o azeite, o xarope de ácer e o sumo de limão e o sal. Misture bem.\n Montar a salada começando pelo molho na base, seguido pelo bulgur cozido, depois lentilhas, pepino, cebola roxa, azeitonas, tomates e salsa. Aproveitar!",
       "notes": "",
-      "liked": true,
+      "liked": false,
       "id": 9
     },
     {
@@ -71,7 +71,7 @@
       "id": 11
     },
     {
-      "title": "Gelado de Oreo",
+      "title": "Gelado de Bolacha Oreo",
       "photo": "https://cdn.e-konomista.pt/uploads/2022/07/gelados-oreo-1-850x514.jpg",
       "rating": "4",
       "course": "dessert",
