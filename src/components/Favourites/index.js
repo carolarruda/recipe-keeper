@@ -102,6 +102,7 @@ const filteredRecipes = recipes.filter((recipe) => {
       <div className={className} id="main-container-favourite">
         <div className="favourite-title">FAVOURITE RECIPES</div>
         <section className="card-grid">
+          {filteredRecipes.length === 0 && <h1>Sorry, No recipes found</h1>}
           {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, id) => {
               const isHovered = hoveredCard === id;

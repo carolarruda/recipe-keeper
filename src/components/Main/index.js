@@ -101,6 +101,7 @@ const Main = ({
       <div className={className} id="main-container-new">
         <div className="favourite-title">YOUR RECIPES</div>
         <section className="card-grid">
+        {filteredRecipes.length === 0 && <h1>Sorry, No recipes found</h1>}
           {filteredRecipes.length > 0 &&
             filteredRecipes.map((item, index) => {
               const isHovered = hoveredCard === index;
