@@ -19,6 +19,7 @@ function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
   const [isLiked, setIsLiked] = useState('');
+  
   const [theme, setTheme] = useState(() => {
     const localValue = localStorage.getItem("THEME");
     if (localValue == null) return [];
@@ -35,15 +36,14 @@ function App() {
       .then((data) => {
         setRecipes(data);
       });
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/websites")
+      fetch("http://localhost:4000/websites")
       .then((response) => response.json())
       .then((data) => {
         setWebsites(data);
       });
   }, []);
+
+
 
   useEffect(() => {
     localStorage.setItem("THEME", JSON.stringify(theme));
@@ -76,7 +76,8 @@ function App() {
     const opts = {
       method: "DELETE",
     };
-    fetch(`http://localhost:4000/recipes/${id}`, opts)
+    return(
+      fetch(`http://localhost:4000/recipes/${id}`, opts)
       .then((response) => response.json())
       .then(() => {
         fetch("http://localhost:4000/recipes")
@@ -84,7 +85,9 @@ function App() {
           .then((data) => {
             setRecipes(data);
           });
-      });
+      })
+    )
+
   };
 
   const handleDeleteRecipe = (id) => {
@@ -98,7 +101,8 @@ function App() {
     const opts = {
       method: "DELETE",
     };
-    fetch(`http://localhost:4000/recipes/${id}`, opts)
+    return(
+      fetch(`http://localhost:4000/recipes/${id}`, opts)
       .then((response) => response.json())
       .then(() => {
         fetch("http://localhost:4000/recipes")
@@ -107,7 +111,9 @@ function App() {
             setRecipes(data);
             navigate(-1);
           });
-      });
+      })
+    )
+
   };
 
   const handleDeleteWeb = (id) => {
@@ -121,7 +127,8 @@ function App() {
     const opts = {
       method: "DELETE",
     };
-    fetch(`http://localhost:4000/websites/${id}`, opts)
+    return(
+      fetch(`http://localhost:4000/websites/${id}`, opts)
       .then((response) => response.json())
       .then(() => {
         fetch("http://localhost:4000/websites")
@@ -129,7 +136,9 @@ function App() {
           .then((data) => {
             setWebsites(data);
           });
-      });
+      })
+    )
+
   };
 
   const [search, setSearch] = useState("");
@@ -176,7 +185,7 @@ function App() {
       if (item.id === id) {
         return {
           ...item,
-          liked: !item.liked,
+          liked: false,
         };
       } else {
         return item;
@@ -258,6 +267,8 @@ function App() {
               handleSearchApi={handleSearchApi}
               meals={meals}
               setMeals={setMeals}
+              setIsLiked={setIsLiked}
+              isLiked={isLiked}
               
             />
           }
@@ -279,6 +290,8 @@ function App() {
               theme={theme}
               search={search}
               likeRecipe={likeRecipe}
+              setIsLiked={setIsLiked}
+              isLiked={isLiked}
             />
           }
         />
