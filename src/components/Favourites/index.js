@@ -45,36 +45,66 @@ const Favourites = ({
   }, [setWebsites]);
 
   const likeRecipe = (id) => {
-    const dislike = {
-      liked: false,
-    };
+    
+    const likedRecipe = recipes.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          liked: false,
+        };
+      } else {
+        return item;
+      }
+    });
 
-    const optLike = {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dislike),
-    };
-    fetch(`http://localhost:4000/recipes/${id}`, optLike)
-      .then((response) => response.json())
-      .then(() => {
-        fetch("http://localhost:4000/recipes")
-          .then((response) => response.json())
-          .then((data) => {
-            setRecipes(data);
-            setIsLiked(false);
-          });
-      });
+    setRecipes(likedRecipe);
+
+    const isRecipeLiked =
+      likedRecipe.find((item) => item.id === id)?.liked || false;
+    setIsLiked(isRecipeLiked);
+    
+    const cacheBuster = Date.now();
+
+    const url = `http://localhost:4000/recipes/${id}?cache=${cacheBuster}`
+
+    if (isLiked) {
+      const dislike = {
+        liked: false,
+      };
+
+      const optLike = {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dislike),
+      };
+
+     
+
+      fetch(url, optLike)
+        .then((response) => response.json())
+
+    } else {
+      const LikedRecipe = {
+        liked: true,
+      };
+
+      const optLike = {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(LikedRecipe),
+      };
+      fetch(url, optLike)
+        .then((response) => response.json())
+
+
+    }
   };
   
 const handleDeleteWeb = (id) => {
-  const filteredWebsites = websites.find((website) => {
-    if (website.id !== id) {
-      return website;
-    }
-  });
-  setWebsites(filteredWebsites);
 
   const opts = {
     method: "DELETE",

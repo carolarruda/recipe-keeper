@@ -18,6 +18,7 @@ function App() {
   const [websites, setWebsites] = useState([]);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredCardTwo, setHoveredCardTwo] = useState(null);
+  const [isLiked, setIsLiked] = useState('');
   const [theme, setTheme] = useState(() => {
     const localValue = localStorage.getItem("THEME");
     if (localValue == null) return [];
@@ -169,6 +170,65 @@ function App() {
       });
   };
 
+  const likeRecipe = (id) => {
+    
+    const likedRecipe = recipes.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          liked: !item.liked,
+        };
+      } else {
+        return item;
+      }
+    });
+
+    setRecipes(likedRecipe);
+
+    const isRecipeLiked =
+      likedRecipe.find((item) => item.id === id)?.liked || false;
+    setIsLiked(isRecipeLiked);
+
+
+    const url = `http://localhost:4000/recipes/${id}`;
+
+    if (isLiked) {
+      const dislike = {
+        liked: false,
+      };
+
+      const optLike = {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dislike),
+      };
+
+     
+
+      fetch(url, optLike)
+        .then((response) => response.json())
+
+    } else {
+      const LikedRecipe = {
+        liked: true,
+      };
+
+      const optLike = {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(LikedRecipe),
+      };
+      fetch(url, optLike)
+        .then((response) => response.json())
+
+
+    }
+  };
+
   return (
     <div className="grid">
       <SideBar
@@ -198,6 +258,7 @@ function App() {
               handleSearchApi={handleSearchApi}
               meals={meals}
               setMeals={setMeals}
+              
             />
           }
         />
@@ -217,6 +278,7 @@ function App() {
               websites={websites}
               theme={theme}
               search={search}
+              likeRecipe={likeRecipe}
             />
           }
         />
